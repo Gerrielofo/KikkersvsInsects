@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FruitbowlHealth : MonoBehaviour
 {
-    public float health;
+    public int health;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class FruitbowlHealth : MonoBehaviour
     {
         if (collision.gameObject.name == "insect")
         {
-            health -= 5;
+            print("kut collision");
         }
     }
 }

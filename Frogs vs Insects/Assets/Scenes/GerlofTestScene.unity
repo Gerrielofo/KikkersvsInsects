@@ -4097,8 +4097,8 @@ GameObject:
   - component: {fileID: 910588216}
   - component: {fileID: 910588215}
   - component: {fileID: 910588214}
-  - component: {fileID: 910588213}
   - component: {fileID: 910588212}
+  - component: {fileID: 910588213}
   m_Layer: 0
   m_Name: insect
   m_TagString: Untagged
@@ -4131,19 +4131,19 @@ MonoBehaviour:
   - {fileID: 1611650728}
   moveSpeed: 5
   waypointIndex: 0
---- !u!135 &910588213
-SphereCollider:
+--- !u!65 &910588213
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910588211}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.3325672, z: 1}
+  m_Center: {x: 0, y: 0.1662831, z: 0}
 --- !u!23 &910588214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4201,7 +4201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910588211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.9678, y: 65.916, z: -3.0476}
+  m_LocalPosition: {x: -5.9678, y: 66.046, z: -3.0476}
   m_LocalScale: {x: 0.64483154, y: 0.64483154, z: 0.64483154}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9491,11 +9491,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040335329}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Size: {x: 1.0000001, y: 8.99699, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 3.4984937, z: -0.00000011920929}
 --- !u!23 &2040335331
 MeshRenderer:
   m_ObjectHideFlags: 0
