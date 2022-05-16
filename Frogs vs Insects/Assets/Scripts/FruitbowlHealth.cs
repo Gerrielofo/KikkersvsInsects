@@ -20,7 +20,7 @@ public class FruitbowlHealth : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Insect")
+        if (col.gameObject.tag == "fruit")
         {
             print("kut collision");
             health -= 5;
