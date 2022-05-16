@@ -27,7 +27,7 @@ public class WaypointSystem : MonoBehaviour
         }
         if(waypointIndex == waypoints.Length)
         {
-            waypointIndex = 0;
+            Destroy(this.gameObject);
         }
     }
 }
