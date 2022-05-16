@@ -18,11 +18,12 @@ public class FruitbowlHealth : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision col)
     {
-        if (collision.gameObject.name == "insect")
+        if (col.gameObject.tag == "Insect")
         {
             print("kut collision");
+            health -= 5;
         }
     }
 }
