@@ -109,5 +109,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hovercolor: {r: 0, g: 0.25225234, b: 1, a: 1}
-  positionOffset: {x: 0, y: 0.275, z: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
   turret: {fileID: 0}
