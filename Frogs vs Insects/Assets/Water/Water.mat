@@ -13,7 +13,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -41,9 +41,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_3c85d1bb6a51452aa709f59f5a4c8420: 0.2
-    - Vector1_7dbf4727feec48059200e9d0b01395e9: 0.36
-    - Vector1_7faf19009ae14ed2b0d5aad89e76dd41: 0.11
-    - Vector1_aecaa287968643efb331850919ddce35: 0.73
+    - Vector1_7dbf4727feec48059200e9d0b01395e9: 0.27
+    - Vector1_7faf19009ae14ed2b0d5aad89e76dd41: 0.1
+    - Vector1_aecaa287968643efb331850919ddce35: 0.5
     - Vector1_b84f1929abec4743b73f010836ee6db6: 1
     m_Colors:
     - Color_2895ccd83b39423da6d60f7e107fd414: {r: 0, g: 0.62555486, b: 0.8207547, a: 0.7450981}
