@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88311c87a9dec90498fef2965c3ddada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 7
-  fireRate: 2
+  range: 5
+  fireRate: 1
   partToRotate: {fileID: 4479508127674626368}
-  turnSpeed: 10
+  turnSpeed: 30
   bulletPrefab: {fileID: 3087844780777530006, guid: 289286c478b62e04faffb5a6885fdff2, type: 3}
   firePoint: {fileID: 6599170603250840334}
   enemyTag: Enemy
@@ -63,7 +63,6 @@ GameObject:
   - component: {fileID: 7640041287283766241}
   - component: {fileID: 6748989868955860036}
   - component: {fileID: 8812926334134257806}
-  - component: {fileID: 6428402331917707780}
   m_Layer: 0
   m_Name: Groenekikker
   m_TagString: Untagged
@@ -134,25 +133,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6428402331917707780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011314891016218971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88311c87a9dec90498fef2965c3ddada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 7.03
-  fireRate: 1
-  partToRotate: {fileID: 4479508127674626368}
-  turnSpeed: 10
-  bulletPrefab: {fileID: 3087844780777530006, guid: 289286c478b62e04faffb5a6885fdff2, type: 3}
-  firePoint: {fileID: 6599170603250840334}
-  enemyTag: Enemy
 --- !u!1 &8645321557285757316
 GameObject:
   m_ObjectHideFlags: 0
