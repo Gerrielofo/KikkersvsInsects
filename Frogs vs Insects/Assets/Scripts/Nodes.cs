@@ -5,7 +5,10 @@ using UnityEngine;
 public class Nodes : MonoBehaviour
 {
     public Color hovercolor;
+    public Vector3 positionOffset;
+
     public GameObject turret;
+
     private Color startcolor;
     private Renderer rend;
 
@@ -19,9 +22,12 @@ public class Nodes : MonoBehaviour
     {
         if (turret != null)
         {
-            Debug.Log("fuck you");
+            Debug.Log("No place");
             return;
         }
+
+        GameObject turretToBuild = BuildManager.instance.getTurretToBuild();
+        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
     }
 
     private void OnMouseEnter()
