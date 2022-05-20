@@ -24,6 +24,7 @@ public class WaypointSystem : MonoBehaviour
         if(transform.position == waypoints[waypointIndex].transform.position)
         {
             waypointIndex += 1;
+            transform.LookAt(waypoints[waypointIndex]);
         }
         if(waypointIndex == waypoints.Length)
         {

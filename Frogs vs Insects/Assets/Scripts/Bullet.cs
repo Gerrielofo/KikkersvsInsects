@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
     private Transform target;
 
     public float speed = 70f;
+    public float explosionRadius = 0f;
+
     public GameObject impactEffect;
 
     public void Seek (Transform _target)
@@ -38,9 +40,26 @@ public class Bullet : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
 
-        Destroy(target.gameObject);
+        if(explosionRadius > 0)
+        {
+            Explode();
+        }
+        else
+        {
+            Damage(target);
+        }
+        
         Destroy(gameObject);
 
- 
     }
+    void Explode()
+    {
+
+    }
+    void Damage(Transform enemy)
+    {
+        Destroy(enemy.gameObject);
+    }
+    
+    
 }
