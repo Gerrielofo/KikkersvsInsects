@@ -5,26 +5,30 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
-    void Awake()
+
+    public GameObject bert;
+    public GameObject bob;
+    public GameObject paul;
+    public GameObject esmee;
+    public GameObject edward;
+    
+    private GameObject turretToBuild;
+
+    private void Awake()
     {
         if(instance != null)
         {
             Debug.LogError("More than one BuildManager in scene!");
-            return;
         }
         instance = this;
     }
-
-    public GameObject bert;
-
-    void Start()
-    {
-        turretToBuild = bert;
-    }
-
-    private GameObject turretToBuild;
-    public GameObject getTurretToBuild()
+    public GameObject GetTurretToBuild()
     {
         return turretToBuild;
+    }
+
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
     }
 }
