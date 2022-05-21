@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 6417408999775269635, guid: cf62f311d934937498868fcfb2860e7f, type: 3}
+  - {fileID: 317639529914250780, guid: cf62f311d934937498868fcfb2860e7f, type: 3}
   - {fileID: 1560714958551031613, guid: b5615f3f729d14c4a9fcda003d01c3e9, type: 3}
   - {fileID: 4576228125673658849, guid: 9c526df7d71f536408b3e1a59b750c36, type: 3}
   - {fileID: 1569014454351782860, guid: 88bfd38b7c8e5f44dae55d1687a8fac8, type: 3}
