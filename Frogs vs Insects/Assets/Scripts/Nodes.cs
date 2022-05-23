@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class Nodes : MonoBehaviour
 {
     public Color hovercolor;
+    public Color noPlace;
     public Vector3 positionOffset;
 
     public GameObject turret;
@@ -41,9 +42,14 @@ public class Nodes : MonoBehaviour
         }
 
         GameObject turretToBuild = buildManager.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
-        GetComponent<BuildManager>().turretToBuild = null;
-        return;
+        if(turret == null)
+        {
+            turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+            Debug.Log("turret placed");
+            
+        }
+        Debug.Log("Deselect");
+        buildManager.SetTurretToBuild(null);
         
     }
 
@@ -54,6 +60,9 @@ public class Nodes : MonoBehaviour
 
         if (buildManager.GetTurretToBuild() == null)
             return;
+        if (turret != null)
+        rend.material.color = noPlace;
+        
    
         rend.material.color = hovercolor;
     }

@@ -14,6 +14,7 @@ public class BuildManager : MonoBehaviour
     
     public GameObject turretToBuild;
 
+
     private void Awake()
     {
         if(instance != null)
@@ -30,5 +31,6 @@ public class BuildManager : MonoBehaviour
     public void SetTurretToBuild(GameObject turret)
     {
         turretToBuild = turret;
+        return;
     }
 }

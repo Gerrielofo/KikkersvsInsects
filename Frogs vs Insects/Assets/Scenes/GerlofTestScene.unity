@@ -4104,6 +4104,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: noPlace.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: noPlace.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: noPlace.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7495724991995289740, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
       propertyPath: m_Name
       value: Nodes
