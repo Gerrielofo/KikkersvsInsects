@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3288197123474354760}
   - component: {fileID: 6683653510026151499}
+  - component: {fileID: 3755857137966005644}
   m_Layer: 0
   m_Name: Larve
   m_TagString: Enemy
@@ -57,6 +58,19 @@ MonoBehaviour:
   - {fileID: 7534622897785153116, guid: 7ecc5b99366faf74eaae2f768ff93045, type: 3}
   moveSpeed: 3
   waypointIndex: 0
+--- !u!65 &3755857137966005644
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302012569202760259}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5709572, y: 0.45490688, z: 1.6405694}
+  m_Center: {x: 0.02027607, y: 0.27254656, z: 0.010265231}
 --- !u!1001 &8091771477126004973
 PrefabInstance:
   m_ObjectHideFlags: 0

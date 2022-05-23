@@ -28,7 +28,11 @@ public class Nodes : MonoBehaviour
             return;
 
         if (buildManager.GetTurretToBuild() == null)
+        {
+            Debug.Log("No frog selected");
             return;
+        }
+            
         
         if (turret != null)
         {
@@ -38,6 +42,9 @@ public class Nodes : MonoBehaviour
 
         GameObject turretToBuild = buildManager.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
+        GetComponent<BuildManager>().turretToBuild = null;
+        return;
+        
     }
 
     private void OnMouseEnter()

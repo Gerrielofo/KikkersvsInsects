@@ -12,7 +12,7 @@ public class BuildManager : MonoBehaviour
     public GameObject esmee;
     public GameObject edward;
     
-    private GameObject turretToBuild;
+    public GameObject turretToBuild;
 
     private void Awake()
     {
