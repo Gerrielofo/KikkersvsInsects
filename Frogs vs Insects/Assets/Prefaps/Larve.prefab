@@ -56,7 +56,7 @@ MonoBehaviour:
   - {fileID: 7974987724408821552, guid: 9cc48743702f3e243bab4f91b023ad8f, type: 3}
   - {fileID: 5377331472294381967, guid: d81b7adccc8ecb3419681d181c71aa35, type: 3}
   - {fileID: 7534622897785153116, guid: 7ecc5b99366faf74eaae2f768ff93045, type: 3}
-  moveSpeed: 3
+  moveSpeed: 6
   waypointIndex: 0
 --- !u!65 &3755857137966005644
 BoxCollider:
