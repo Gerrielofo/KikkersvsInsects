@@ -7,6 +7,7 @@ public class Nodes : MonoBehaviour
     public Color noPlace;
     public Vector3 positionOffset;
 
+    [Header("Optional")]
     public GameObject turret;
 
     private Color startcolor;
@@ -23,12 +24,16 @@ public class Nodes : MonoBehaviour
         buildManager = BuildManager.instance;
     }
 
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
+    }
     private void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (buildManager.GetTurretToBuild() == null)
+        if (!buildManager.CanBuild)
         {
             Debug.Log("No frog selected");
             return;
@@ -41,15 +46,9 @@ public class Nodes : MonoBehaviour
             return;
         }
 
-        GameObject turretToBuild = buildManager.GetTurretToBuild();
-        if(turret == null)
-        {
-            turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
-            Debug.Log("turret placed");
-            
-        }
+        buildManager.BuildTurretOn(this);
         Debug.Log("Deselect");
-        buildManager.SetTurretToBuild(null);
+        buildManager.SelectTurretToBuild(null);
         
     }
 
@@ -58,12 +57,12 @@ public class Nodes : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (buildManager.GetTurretToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
+
         if (turret != null)
         rend.material.color = noPlace;
         
-   
         rend.material.color = hovercolor;
     }
 

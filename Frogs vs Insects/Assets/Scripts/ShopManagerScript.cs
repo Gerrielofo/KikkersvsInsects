@@ -9,7 +9,8 @@ public class ShopManagerScript : MonoBehaviour
     public int[,] shopItems = new int[6,6];
     public float coins;
     public Text coinsTXT;
-    
+    public Text cashAmount;
+
     void Start()
     {
         coinsTXT.text = "Coins:" + coins.ToString();
@@ -38,5 +39,10 @@ public class ShopManagerScript : MonoBehaviour
             coinsTXT.text = "Coins:" + coins.ToString();
             
         }
+    }
+
+    void Update()
+    {
+        cashAmount.text = "Coins: $" + PlayerStats.money;
     }
 }

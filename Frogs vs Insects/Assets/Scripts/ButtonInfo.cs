@@ -7,6 +7,7 @@ public class ButtonInfo : MonoBehaviour
 {
     public int itemID;
     public Text priceTxt;
+    
     public GameObject shopManager; 
     
     void Update()

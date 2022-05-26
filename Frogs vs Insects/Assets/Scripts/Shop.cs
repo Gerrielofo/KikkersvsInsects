@@ -2,35 +2,41 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public TurretBlueprint bert;
+    public TurretBlueprint edward;
+    public TurretBlueprint esmee;
+    public TurretBlueprint bob;
+    public TurretBlueprint paul;
+
     BuildManager buildManager;
 
     void Start()
     {
         buildManager = BuildManager.instance;
     }
-    public void KoopBert()
+    public void SelecteerBert()
     {
         Debug.Log("Bert selected");
-        buildManager.SetTurretToBuild(buildManager.bert);
+        buildManager.SelectTurretToBuild(bert);
     }
-    public void KoopEdward()
+    public void SelecteerEdward()
     {
         Debug.Log("Edward selected");
-        buildManager.SetTurretToBuild(buildManager.edward);
+        buildManager.SelectTurretToBuild(edward);
     }
-    public void KoopEsmee()
+    public void SelecteerEsmee()
     {
         Debug.Log("Esmee selected");
-        buildManager.SetTurretToBuild(buildManager.esmee);
+        buildManager.SelectTurretToBuild(esmee);
     }
-    public void KoopBob()
+    public void SelecteerBob()
     {
         Debug.Log("Bob selected");
-        buildManager.SetTurretToBuild(buildManager.bob);
+        buildManager.SelectTurretToBuild(bob);
     }
-    public void KoopPaul()
+    public void SelecteerPaul()
     {
         Debug.Log("Paul selected");
-        buildManager.SetTurretToBuild(buildManager.paul);
+        buildManager.SelectTurretToBuild(paul);
     }
 }
