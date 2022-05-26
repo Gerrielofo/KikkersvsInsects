@@ -13,7 +13,7 @@ public class ShopManagerScript : MonoBehaviour
 
     void Start()
     {
-        coinsTXT.text = "Coins:" + coins.ToString();
+        coinsTXT.text = "$" + coins.ToString();
 
         //ID
         shopItems[1, 1] = 1;
@@ -36,13 +36,13 @@ public class ShopManagerScript : MonoBehaviour
         if (coins >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().itemID])
         {
             coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().itemID];
-            coinsTXT.text = "Coins:" + coins.ToString();
+            coinsTXT.text = "$" + coins.ToString();
             
         }
     }
 
     void Update()
     {
-        cashAmount.text = "Coins: $" + PlayerStats.money;
+        cashAmount.text = "$" + PlayerStats.money;
     }
 }

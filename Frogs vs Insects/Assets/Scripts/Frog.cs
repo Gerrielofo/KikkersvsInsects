@@ -57,7 +57,7 @@ public class Frog : MonoBehaviour
     void Update()
     {
         if (target == null)
-            return;
+            return;   
         //Target lock system
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);

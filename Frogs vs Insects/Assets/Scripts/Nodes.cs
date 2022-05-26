@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class Nodes : MonoBehaviour
 {
     public Color hovercolor;
-    public Color noPlace;
+    public Color notEnoughMoney;
     public Vector3 positionOffset;
 
     [Header("Optional")]
@@ -60,10 +60,14 @@ public class Nodes : MonoBehaviour
         if (!buildManager.CanBuild)
             return;
 
-        if (turret != null)
-        rend.material.color = noPlace;
-        
-        rend.material.color = hovercolor;
+        if (buildManager.HasMoney)
+        {
+            rend.material.color = hovercolor;
+        }
+        else
+        {
+            rend.material.color = Color.red;
+        }
     }
 
     private void OnMouseExit()

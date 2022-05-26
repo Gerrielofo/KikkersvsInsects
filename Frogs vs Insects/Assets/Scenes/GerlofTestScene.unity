@@ -603,7 +603,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 2
   priceTxt: {fileID: 1195245809}
-  cashAmount: {fileID: 0}
   shopManager: {fileID: 2119239977}
 --- !u!114 &306061742
 MonoBehaviour:
@@ -849,7 +848,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Coins: 0'
+  m_Text: $ 500
 --- !u!222 &405147761
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1054,7 +1053,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 3
   priceTxt: {fileID: 19248324}
-  cashAmount: {fileID: 0}
   shopManager: {fileID: 2119239977}
 --- !u!114 &524821749
 MonoBehaviour:
@@ -2586,7 +2584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 5
   priceTxt: {fileID: 1413263959}
-  cashAmount: {fileID: 0}
   shopManager: {fileID: 2119239977}
 --- !u!114 &1311331316
 MonoBehaviour:
@@ -2873,7 +2870,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 1
   priceTxt: {fileID: 428139009}
-  cashAmount: {fileID: 0}
   shopManager: {fileID: 2119239977}
 --- !u!114 &1547070966
 MonoBehaviour:
@@ -3257,7 +3253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4
   priceTxt: {fileID: 569240879}
-  cashAmount: {fileID: 0}
   shopManager: {fileID: 2119239977}
 --- !u!114 &1829333175
 MonoBehaviour:
@@ -4216,6 +4211,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
       propertyPath: noPlace.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: hovercolor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: notEnoughMoney.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: notEnoughMoney.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: notEnoughMoney.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: notEnoughMoney.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7495724991995289731, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
+      propertyPath: positionOffset.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7495724991995289740, guid: 39f2de8aa011f63489739f5f5d14f5cc, type: 3}
