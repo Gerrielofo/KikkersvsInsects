@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 7699665742269872572}
   - component: {fileID: 449023206813634661}
   m_Layer: 0
-  m_Name: Tapir
+  m_Name: Paul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

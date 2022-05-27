@@ -15,11 +15,6 @@ public class WaveSystem : MonoBehaviour
     public int[,] waveSpawn = new int[30, 30];
     private int waveCount = 0;
     
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if(countdown <= 0)

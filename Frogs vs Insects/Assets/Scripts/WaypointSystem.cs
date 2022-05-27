@@ -21,14 +21,23 @@ public class WaypointSystem : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
 
-        if(transform.position == waypoints[waypointIndex].transform.position)
+        
+        if(waypointIndex >= waypoints.Length)
+        {
+            EndPath();
+            return;
+        }
+        if (transform.position == waypoints[waypointIndex].transform.position)
         {
             waypointIndex += 1;
             transform.LookAt(waypoints[waypointIndex]);
         }
-        if(waypointIndex == waypoints.Length)
-        {
-            Destroy(this.gameObject);
-        }
+    }
+
+    void EndPath()
+    {
+        PlayerStats.Lives -= 5;
+        Destroy(gameObject);
+        return;
     }
 }
