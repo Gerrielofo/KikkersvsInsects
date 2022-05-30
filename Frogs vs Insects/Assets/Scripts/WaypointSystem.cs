@@ -30,6 +30,7 @@ public class WaypointSystem : MonoBehaviour
         if (transform.position == waypoints[waypointIndex].transform.position)
         {
             waypointIndex += 1;
+            PlayerStats.Rounds += 1;
             transform.LookAt(waypoints[waypointIndex]);
         }
     }

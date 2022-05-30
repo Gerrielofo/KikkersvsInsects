@@ -11,6 +11,7 @@ public class WaveSystem : MonoBehaviour
     public float countdown = 2f;
 
     public Text waveCountdownText;
+    public Text roundsText;
 
     public int[,] waveSpawn = new int[30, 30];
     private int waveCount = 0;
@@ -26,11 +27,13 @@ public class WaveSystem : MonoBehaviour
         
         countdown -= Time.deltaTime;
 
-        waveCountdownText.text = Mathf.Round(countdown).ToString();
+        roundsText.text = PlayerStats.Rounds.ToString();
+        //waveCountdownText.text = Mathf.Round(countdown).ToString();
     }
     IEnumerator SpawnWave()
     {
         waveCount += 1;
+        PlayerStats.Rounds += 1;
 
         for (int i = 0; i < waveCount; i++)
         {
