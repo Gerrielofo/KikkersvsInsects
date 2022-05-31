@@ -7,20 +7,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
 
-    
     private void Start()
     {
         GameIsOver = false;
-
     }
     void Update()
     {
-       
-        if (Input.GetKey(KeyCode.E))
-        {
-            EndGame();
-
-        }
         if (GameIsOver)
             return;
         if (PlayerStats.Lives <= 0)
