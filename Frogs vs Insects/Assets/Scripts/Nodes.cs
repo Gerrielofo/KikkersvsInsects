@@ -49,7 +49,7 @@ public class Nodes : MonoBehaviour
         buildManager.BuildTurretOn(this);
         Debug.Log("Deselect");
         buildManager.SelectTurretToBuild(null);
-        
+
     }
 
     private void OnMouseEnter()

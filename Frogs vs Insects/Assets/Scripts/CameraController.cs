@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
     public float minZ = 80f;
     public float maxZ = 80f;
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (GameManager.GameIsOver)
@@ -58,6 +58,5 @@ public class CameraController : MonoBehaviour
         pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
 
         transform.position = pos;
-
     }
 }

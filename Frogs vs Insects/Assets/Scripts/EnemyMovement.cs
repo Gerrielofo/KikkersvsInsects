@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 
     public int health = 100;
 
-    public int value = 25;
+    public int gainMoney = 25;
 
     public GameObject deathEffect;
 
@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
     
     void Die()
     {
-        PlayerStats.money += value;
+        PlayerStats.money += gainMoney;
 
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 2f);

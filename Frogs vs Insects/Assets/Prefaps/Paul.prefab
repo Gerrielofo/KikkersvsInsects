@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88311c87a9dec90498fef2965c3ddada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
+  range: 6
   fireRate: 1
   partToRotate: {fileID: 8218492958638774664}
   turnSpeed: 10
