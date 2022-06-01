@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 8c1efd2bbaf677942950b13fc648b9d5
   - enabled: 1
-    path: Assets/Scenes/GerlofTestScene.unity
+    path: Assets/Scenes/Game.unity
     guid: e3846555efc0b444590f95e4e4aec1be
   m_configObjects: {}
