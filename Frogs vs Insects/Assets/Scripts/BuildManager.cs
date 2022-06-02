@@ -48,7 +48,7 @@ public class BuildManager : MonoBehaviour
         Debug.Log("Turret build! Money left:" + PlayerStats.money);
     }
 
-    public void selectnode (Node node)
+    public void selectnode (Nodes node)
     {
         selectedNode = node;
         turretToBuild = null;
