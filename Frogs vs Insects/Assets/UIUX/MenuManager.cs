@@ -24,4 +24,9 @@ public class MenuManager : MonoBehaviour
         optionsUI.SetActive(false);
         wantOptions = false;
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
