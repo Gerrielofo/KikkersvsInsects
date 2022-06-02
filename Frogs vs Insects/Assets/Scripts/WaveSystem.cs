@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class WaveSystem : MonoBehaviour
 {
+    public static int enemiesAlive = 0;
+
     public Transform insect;
+    
     public Transform spawnpoint;
+    
     public float timeBetweenWaves = 5f;
     public float countdown = 2f;
 
     public Text waveCountdownText;
+    
     public Text roundsText;
 
     public int[,] waveSpawn = new int[30, 30];
@@ -45,5 +50,6 @@ public class WaveSystem : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(insect, spawnpoint.position, spawnpoint.rotation);
+        enemiesAlive++;
     }
 }
