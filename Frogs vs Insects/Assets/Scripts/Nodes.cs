@@ -32,14 +32,7 @@ public class Nodes : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-
-        if (!buildManager.CanBuild)
-        {
-            Debug.Log("No frog selected");
-            return;
-        }
-            
-        
+   
         if (turret != null)
         {
             Debug.Log("No place");
@@ -47,9 +40,16 @@ public class Nodes : MonoBehaviour
         }
 
         buildManager.BuildTurretOn(this);
-        Debug.Log("Deselect");
-        buildManager.SelectTurretToBuild(null);
 
+        Debug.Log("Deselect");
+        
+        buildManager.SelectTurretToBuild(null);
+        
+        if (!buildManager.CanBuild)
+        {
+            Debug.Log("No frog selected");
+            return;
+        }
     }
 
     private void OnMouseEnter()
