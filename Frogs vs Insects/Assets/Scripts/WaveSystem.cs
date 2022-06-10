@@ -32,7 +32,7 @@ public class WaveSystem : MonoBehaviour
         
         countdown -= Time.deltaTime;
 
-        roundsText.text = PlayerStats.Rounds.ToString();
+        roundsText.text = PlayerStats.Rounds.ToString() + "/30";
         //waveCountdownText.text = Mathf.Round(countdown).ToString();
     }
     IEnumerator SpawnWave()
