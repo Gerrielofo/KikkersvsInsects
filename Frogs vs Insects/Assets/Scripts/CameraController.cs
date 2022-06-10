@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private bool doMovement = true;
+    private bool doMouseMovement = true;
 
     [Header("Zoom")]
     public float scrollSpeed = 5f;
@@ -31,19 +32,19 @@ public class CameraController : MonoBehaviour
         if (!doMovement)
             return;
 
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height -panBorderThickness)
+        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height -panBorderThickness && doMouseMovement == true)
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness && doMouseMovement == true)
         {
             transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
+        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness && doMouseMovement == true)
         {
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
+        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness && doMouseMovement == true)
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
@@ -58,5 +59,11 @@ public class CameraController : MonoBehaviour
         pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
 
         transform.position = pos;
+    }
+
+    public void ToggleMouseLook()
+    {
+        doMouseMovement = !doMouseMovement;
+        Debug.Log("Mouse Movement Toggled");
     }
 }

@@ -21,6 +21,8 @@ public class Nodes : MonoBehaviour
         rend = GetComponent<Renderer>();
         startcolor = rend.material.color;
 
+        positionOffset.y = 0.1f;
+
         buildManager = BuildManager.instance;
     }
 

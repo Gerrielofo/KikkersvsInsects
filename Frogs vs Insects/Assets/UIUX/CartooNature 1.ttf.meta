@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e9d44202db3ef8b40bd834a25b9ecbb6
+guid: 18741cb71da7c0b43a4e58a7910c9c8d
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Organic Relief
-  fallbackFontReferences: []
+  - Cartoo Nature
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3690c226036992d429281e92cc445b29, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

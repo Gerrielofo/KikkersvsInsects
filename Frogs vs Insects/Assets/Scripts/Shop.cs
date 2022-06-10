@@ -14,6 +14,30 @@ public class Shop : MonoBehaviour
     {
         buildManager = BuildManager.instance;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SelecteerBert();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SelecteerBob();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SelecteerEsmee();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SelecteerPaul();
+        }
+        //if (Input.GetKeyDown(KeyCode.Alpha5))
+        //{
+        //    SelecteerPaul();
+        //}
+    }
     public void SelecteerBert()
     {
         Debug.Log("Bert selected");
