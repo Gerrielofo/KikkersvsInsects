@@ -23,14 +23,14 @@ public class WaveSystem : MonoBehaviour
     
     void Update()
     {
-        if(countdown <= 0)
+        if(enemiesAlive == 0)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
             
         }
         
-        countdown -= Time.deltaTime;
+        //countdown -= Time.deltaTime;
 
         roundsText.text = PlayerStats.Rounds.ToString() + "/30";
         //waveCountdownText.text = Mathf.Round(countdown).ToString();

@@ -31,6 +31,9 @@ public class Frog : MonoBehaviour
 
     void UpdateTarget()
     {
+        if (GameManager.GameIsOver == true)
+            return;
+
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -57,7 +60,11 @@ public class Frog : MonoBehaviour
     void Update()
     {
         if (target == null)
-            return;   
+            return;
+
+        if (GameManager.GameIsOver == true)
+            return;
+
         //Target lock system
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);

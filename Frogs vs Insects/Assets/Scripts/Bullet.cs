@@ -26,6 +26,9 @@ public class Bullet : MonoBehaviour
             return;
         }
 
+        if (GameManager.GameIsOver == true)
+            return;
+
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 

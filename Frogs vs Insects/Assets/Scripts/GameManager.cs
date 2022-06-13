@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
 
+    public GameObject victoryUI;
+
     private void Start()
     {
         GameIsOver = false;
@@ -19,6 +21,10 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+        if(PlayerStats.Rounds >= 30)
+        {
+            Victory();
+        }
     }
 
     void EndGame()
@@ -26,5 +32,11 @@ public class GameManager : MonoBehaviour
         GameIsOver = true;
 
         gameOverUI.SetActive(true);
+    }
+    void Victory()
+    {
+        GameIsOver = true;
+
+        victoryUI.SetActive(true);
     }
 }

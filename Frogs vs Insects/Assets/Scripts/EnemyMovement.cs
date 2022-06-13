@@ -36,9 +36,15 @@ public class EnemyMovement : MonoBehaviour
         Destroy(effect, 2f);
 
         Destroy(gameObject);
+
+        WaveSystem.enemiesAlive -= 1;
+        Debug.Log(WaveSystem.enemiesAlive.ToString() + " enemies alive");
     }
     private void Update()
     {
+        if (GameManager.GameIsOver == true)
+            return;
+
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
