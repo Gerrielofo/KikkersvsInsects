@@ -29,6 +29,10 @@ public class WaveSystem : MonoBehaviour
             countdown = timeBetweenWaves;
             
         }
+        if(enemiesAlive < 0)
+        {
+            enemiesAlive = 0;
+        }
         
         //countdown -= Time.deltaTime;
 
