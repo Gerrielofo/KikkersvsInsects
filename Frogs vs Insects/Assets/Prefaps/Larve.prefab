@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3288197123474354760}
-  - component: {fileID: 6683653510026151499}
   - component: {fileID: 3755857137966005644}
   - component: {fileID: -561905748096785824}
   m_Layer: 0
@@ -34,31 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6683653510026151499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4302012569202760259}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a4999cb11f0e44a9f780d1528dd62d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 317639529914250780, guid: cf62f311d934937498868fcfb2860e7f, type: 3}
-  - {fileID: 1560714958551031613, guid: b5615f3f729d14c4a9fcda003d01c3e9, type: 3}
-  - {fileID: 4576228125673658849, guid: 9c526df7d71f536408b3e1a59b750c36, type: 3}
-  - {fileID: 1569014454351782860, guid: 88bfd38b7c8e5f44dae55d1687a8fac8, type: 3}
-  - {fileID: 1295153010051027554, guid: ada8d5ae21731a24ea98a8041e2fbef4, type: 3}
-  - {fileID: 5328300310325768686, guid: 9b194cb7e2a48f44bb439fa59352d9a3, type: 3}
-  - {fileID: 7947661369716092789, guid: 63f21d8f3136a6946b9cdbb74ac240d5, type: 3}
-  - {fileID: 7974987724408821552, guid: 9cc48743702f3e243bab4f91b023ad8f, type: 3}
-  - {fileID: 5377331472294381967, guid: d81b7adccc8ecb3419681d181c71aa35, type: 3}
-  - {fileID: 7534622897785153116, guid: 7ecc5b99366faf74eaae2f768ff93045, type: 3}
-  moveSpeed: 10
-  waypointIndex: 0
 --- !u!65 &3755857137966005644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   health: 100
-  value: 25
+  gainMoney: 25
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
 --- !u!1001 &8091771477126004973
 PrefabInstance:
