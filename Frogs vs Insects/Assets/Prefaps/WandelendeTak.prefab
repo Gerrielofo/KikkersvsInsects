@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6525718033416220463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.042375, y: -0.16339, z: 0.050342}
+  m_LocalScale: {x: 1.2878181, y: 1.2878181, z: 1.2878181}
   m_Children:
   - {fileID: 4842090675864827289}
   m_Father: {fileID: 0}
@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: bf9cd65dad1ba3240afb53f9e44653a2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b355140115ce29a49b9563e67d32c3f5, type: 2}
+      objectReference: {fileID: 2100000, guid: f6079607e82803d49a9c563dce03fe4d, type: 2}
     - target: {fileID: 919132149155446097, guid: bf9cd65dad1ba3240afb53f9e44653a2, type: 3}
       propertyPath: m_Name
       value: Wandelende_tak
