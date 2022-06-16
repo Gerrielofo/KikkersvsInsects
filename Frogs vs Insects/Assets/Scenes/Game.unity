@@ -818,6 +818,7 @@ MonoBehaviour:
   esmee: {fileID: 4712912954987744892, guid: 20973ba086af7f446bb1716b6f35bb11, type: 3}
   edward: {fileID: 9014315370750879892, guid: c5957d7c86908744e9feea02c1eab874, type: 3}
   buildEffect: {fileID: 6674893587255171629, guid: e8c586fc6606afd42b1b842b9702fc99, type: 3}
+  nodeUI: {fileID: 0}
 --- !u!114 &367868127
 MonoBehaviour:
   m_ObjectHideFlags: 0
