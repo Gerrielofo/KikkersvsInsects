@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject victoryUI;
 
+    public GameObject buttonsUI;
     private void Start()
     {
         GameIsOver = false;
@@ -32,11 +33,13 @@ public class GameManager : MonoBehaviour
         GameIsOver = true;
 
         gameOverUI.SetActive(true);
+        buttonsUI.SetActive(false);
     }
     void Victory()
     {
         GameIsOver = true;
 
         victoryUI.SetActive(true);
+        buttonsUI.SetActive(false);
     }
 }
