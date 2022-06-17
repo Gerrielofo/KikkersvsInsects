@@ -59,6 +59,12 @@ public class Frog : MonoBehaviour
     
     void Update()
     {
+        if (OptionsUI.wantOptions == true)
+        {
+            //Debug.Log("frog paused");
+            return;
+        }
+
         if (target == null)
             return;
 

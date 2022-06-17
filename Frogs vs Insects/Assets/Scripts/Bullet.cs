@@ -26,7 +26,12 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        if (GameManager.GameIsOver == true)
+        if (OptionsUI.wantOptions == true)
+        {
+            //Debug.Log("bullet paused");
+            return;
+        }
+        if (MenuManager.wantOptions == true)
             return;
 
         Vector3 dir = target.position - transform.position;

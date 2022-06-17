@@ -20,13 +20,24 @@ public class WaveSystem : MonoBehaviour
 
     public int[,] waveSpawn = new int[30, 30];
     private int waveCount = 0;
-    
+
+
+    private void Start()
+    {
+        enemiesAlive = 0;
+    }
     void Update()
     {
-        if(enemiesAlive == 0)
+        if (OptionsUI.wantOptions == true)
+        {
+            //Debug.Log("wave system paused");
+            return;
+        }
+
+        if (enemiesAlive == 0)
         {
             StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
+            //countdown = timeBetweenWaves;
             
         }
         if(enemiesAlive < 0)

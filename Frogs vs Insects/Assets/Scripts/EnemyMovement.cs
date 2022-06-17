@@ -42,6 +42,13 @@ public class EnemyMovement : MonoBehaviour
     }
     private void Update()
     {
+        if (OptionsUI.wantOptions == true)
+        {
+            //Debug.Log("enemy movement paused");
+            return;
+        }
+            
+
         if (GameManager.GameIsOver == true)
             return;
 

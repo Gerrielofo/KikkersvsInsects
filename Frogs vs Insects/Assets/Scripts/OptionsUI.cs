@@ -3,7 +3,7 @@ using UnityEngine;
 public class OptionsUI : MonoBehaviour
 {
     public GameObject optionsUI;
-    public bool wantOptions = false;
+    public static bool wantOptions = false;
  
     void Update()
     {
