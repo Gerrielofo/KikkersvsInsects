@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     public GameObject optionsUI;
     public GameObject buttonsUI;
-
     public GameObject levelSelectUI;
-
+    public GameObject QuitUI;
 
     private void Update()
     {
@@ -40,6 +40,19 @@ public class MenuManager : MonoBehaviour
         buttonsUI.SetActive(true);
     }
 
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Game");
+    }
+    public void QuitOn()
+    {
+        QuitUI.SetActive(true);
+    }
+
+    public void QuitOff()
+    {
+        QuitUI.SetActive(false);
+    }
     public void ExitGame()
     {
         Application.Quit();
