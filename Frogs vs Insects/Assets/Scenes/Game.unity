@@ -1390,7 +1390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $ 500
+  m_Text: $ 200
 --- !u!222 &405147761
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9534,7 +9534,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4888952118625854524, guid: adb028bb240ed534eaaf501a2f1fc779, type: 3}
       propertyPath: m_Text
-      value: '300
+      value: '$300
 
 '
       objectReference: {fileID: 0}
@@ -9901,6 +9901,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1041704817}
     m_Modifications:
     - target: {fileID: 8639635101216649515, guid: d4347958ff4ec024ebe190a3afbbdfe6, type: 3}
+      propertyPath: m_Text
+      value: $100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639635101216649515, guid: d4347958ff4ec024ebe190a3afbbdfe6, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: fa499ec2f50b5624badd2daed8a2fb7c, type: 3}
@@ -10134,6 +10138,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 325e0932ee5a9b544b76296e47848f36, type: 3}
     - target: {fileID: 8711694457767782635, guid: 138e6ce8c2b63d142881fd070f54fbcc, type: 3}
+      propertyPath: m_Text
+      value: $200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711694457767782635, guid: 138e6ce8c2b63d142881fd070f54fbcc, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: fa499ec2f50b5624badd2daed8a2fb7c, type: 3}
@@ -10252,7 +10260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9101105299509965496, guid: f591b22015cf0254ba050ab87f8e7744, type: 3}
       propertyPath: m_Text
-      value: 500
+      value: $500
       objectReference: {fileID: 0}
     - target: {fileID: 9101105299509965496, guid: f591b22015cf0254ba050ab87f8e7744, type: 3}
       propertyPath: m_FontData.m_Font

@@ -31,8 +31,6 @@ public class Bullet : MonoBehaviour
             //Debug.Log("bullet paused");
             return;
         }
-        if (MenuManager.wantOptions == true)
-            return;
 
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;

@@ -4,28 +4,39 @@ using System.Collections.Generic;
 public class MenuManager : MonoBehaviour
 {
     public GameObject optionsUI;
-    public static bool wantOptions = false;
     public GameObject buttonsUI;
+
+    public GameObject levelSelectUI;
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && wantOptions == true)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             OptionsMenuOff();
+            LevelSelectOff();
         }
     }
     public void OptionsMenuOn()
     {
         optionsUI.SetActive(true);
-        wantOptions = true;
         buttonsUI.SetActive(false);
     }
 
     public void OptionsMenuOff()
     {
         optionsUI.SetActive(false);
-        wantOptions = false;
+        buttonsUI.SetActive(true);
+    }
+    public void LevelSelectOn()
+    {
+        levelSelectUI.SetActive(true);
+        buttonsUI.SetActive(false);
+    }
+
+    public void LevelSelectOff()
+    {
+        levelSelectUI.SetActive(false);
         buttonsUI.SetActive(true);
     }
 
@@ -33,6 +44,8 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+
     List<int> widths = new List<int>() { 568, 960, 1280, 1920 };
     List<int> heights = new List<int>() { 320, 540, 800, 1080 };
 
