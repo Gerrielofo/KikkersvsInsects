@@ -12,10 +12,10 @@ public class UpgradeTest : MonoBehaviour{
     }
     public void Sell()
     {
-        GameObject frog = (GameObject)GetComponent<Nodes>().turret;
+        //GameObject frog = (GameObject)GetComponent<Nodes>().turret;
 
-        Destroy(frog);
         PlayerStats.money += 50;
+        Destroy(GetComponent<Nodes>().turret);
         Debug.Log("Sell frog");
     }
 }
