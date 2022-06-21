@@ -7,6 +7,8 @@ public class Nodes : MonoBehaviour
     public Color notEnoughMoney;
     public Vector3 positionOffset;
 
+    public static bool isSelected = false;
+
     [Header("Optional")]
     public GameObject turret;
 
@@ -32,12 +34,25 @@ public class Nodes : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
-   
-        if (turret != null)
+            
+        if (turret != null && isSelected == false)
         {
-            Debug.Log("No place");
+            NodeUI.selectUI.SetActive(true);
+            NodeUI.selectUI.transform.position = transform.position;
+            isSelected = true;
+            return;
+        }
+
+        if(isSelected == true)
+        {
+            NodeUI.selectUI.SetActive(false);
+            isSelected = false;
+            return;
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log("Pointer is over a gameobject!");
             return;
         }
 

@@ -20,6 +20,9 @@ public class Frog : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public int sellAmount;
+    public int upgradeCost;
+
     public string enemyTag = "Enemy";
 
 

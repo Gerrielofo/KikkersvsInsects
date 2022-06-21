@@ -131,6 +131,8 @@ MonoBehaviour:
   turnSpeed: 10
   bulletPrefab: {fileID: 3087844780777530006, guid: 289286c478b62e04faffb5a6885fdff2, type: 3}
   firePoint: {fileID: 4371261530331368021}
+  sellAmount: 0
+  upgradeCost: 0
   enemyTag: Enemy
 --- !u!1 &6423181959060433676
 GameObject:
@@ -264,4 +266,6 @@ MonoBehaviour:
   turnSpeed: 10
   bulletPrefab: {fileID: 3087844780777530006, guid: 289286c478b62e04faffb5a6885fdff2, type: 3}
   firePoint: {fileID: 4371261530331368021}
+  sellAmount: 50
+  upgradeCost: 100
   enemyTag: Enemy
