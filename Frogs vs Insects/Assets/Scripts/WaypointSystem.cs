@@ -13,7 +13,7 @@ public class WaypointSystem : MonoBehaviour
 	{
 		enemy = GetComponent<EnemyMovement>();
 
-		target = Waypoints.points[0];
+		target = Waypoint.points[0];
 	}
 
 	void Update()
@@ -27,18 +27,19 @@ public class WaypointSystem : MonoBehaviour
 		}
 
 		enemy.speed = enemy.startSpeed;
+		transform.LookAt(target);
 	}
 
 	void GetNextWaypoint()
 	{
-		if (wavepointIndex >= Waypoints.points.Length - 1)
+		if (wavepointIndex >= Waypoint.points.Length - 1)
 		{
 			EndPath();
 			return;
 		}
 
 		wavepointIndex++;
-		target = Waypoints.points[wavepointIndex];
+		target = Waypoint.points[wavepointIndex];
 	}
 
 	void EndPath()
