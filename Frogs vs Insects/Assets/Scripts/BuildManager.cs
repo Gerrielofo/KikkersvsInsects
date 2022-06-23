@@ -1,66 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    public static BuildManager instance;
 
-    public GameObject bert;
-    public GameObject bob;
-    public GameObject paul;
-    public GameObject esmee;
-    public GameObject edward;
+	public static BuildManager instance;
 
-    public GameObject buildEffect;
+	void Awake()
+	{
+		if (instance != null)
+		{
+			Debug.LogError("More than one BuildManager in scene!");
+			return;
+		}
+		instance = this;
+	}
 
-    public NodeUI nodeUI;
+	public GameObject buildEffect;
+	public GameObject sellEffect;
 
-    private TurretBlueprint turretToBuild;
-    private Nodes selectedNode;
+	private TurretBlueprint turretToBuild;
+	private Nodes selectedNode;
 
+	public NodeUI nodeUI;
 
-    private void Awake()
-    {
-        if(instance != null)
-        {
-            Debug.LogError("More than one BuildManager in scene!");
-        }
-        instance = this;
-    }
-    
-    public bool CanBuild { get { return turretToBuild != null; } }
-    public bool HasMoney { get { return PlayerStats.money >= turretToBuild.cost; } }
+	public bool CanBuild { get { return turretToBuild != null; } }
+	public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
 
-    public void BuildTurretOn(Nodes node)
-    {
-        if(PlayerStats.money < turretToBuild.cost)
-        {
-            Debug.Log("Not Enough Money");
-            return;
-        }
+	public void SelectNode(Nodes node)
+	{
+		if (selectedNode == node)
+		{
+			DeselectNode();
+			return;
+		}
 
-        PlayerStats.money -= turretToBuild.cost;
+		selectedNode = node;
+		turretToBuild = null;
 
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret;
+		nodeUI.SetTarget(node);
+	}
 
-        GameObject effect = (GameObject)Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
-        Destroy(effect, 5f);
-        Debug.Log("Turret build! Money left:" + PlayerStats.money);
-    }
+	public void DeselectNode()
+	{
+		selectedNode = null;
+		NodeUI.Hide();
+	}
 
-    public void Selectnode (Nodes node)
-    {
-        selectedNode = node;
-        turretToBuild = null;
+	public void SelectTurretToBuild(TurretBlueprint turret)
+	{
+		turretToBuild = turret;
+		DeselectNode();
+	}
 
-        nodeUI.SetTarget(node);
-    }
+	public TurretBlueprint GetTurretToBuild()
+	{
+		return turretToBuild;
+	}
 
-    public void SelectTurretToBuild(TurretBlueprint turret)
-    {
-        turretToBuild = turret;
-        selectedNode = null;
-    }
 }

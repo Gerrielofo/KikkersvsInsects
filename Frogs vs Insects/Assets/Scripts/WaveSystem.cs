@@ -1,70 +1,68 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
 public class WaveSystem : MonoBehaviour
 {
-    public static int enemiesAlive = 0;
 
-    public Transform insect;
-    
-    public Transform spawnpoint;
-    
-    public float timeBetweenWaves = 5f;
-    public float countdown = 2f;
+	public static int EnemiesAlive = 0;
 
-    public Text waveCountdownText;
-    
-    public Text roundsText;
+	public Wave[] waves;
 
-    public int[,] waveSpawn = new int[30, 30];
-    private int waveCount = 0;
+	public Transform spawnPoint;
 
+	public float timeBetweenWaves = 5f;
+	private float countdown = 2f;
 
-    private void Start()
-    {
-        enemiesAlive = 0;
-    }
-    void Update()
-    {
-        if (OptionsUI.wantOptions == true)
-        {
-            //Debug.Log("wave system paused");
-            return;
-        }
+	public Text waveCountdownText;
 
-        if (enemiesAlive == 0)
-        {
-            StartCoroutine(SpawnWave());
-            //countdown = timeBetweenWaves;
-            
-        }
-        if(enemiesAlive < 0)
-        {
-            enemiesAlive = 0;
-        }
-        
-        //countdown -= Time.deltaTime;
+	public GameManager gameManager;
 
-        roundsText.text = PlayerStats.Rounds.ToString() + "/30";
-        //waveCountdownText.text = Mathf.Round(countdown).ToString();
-    }
-    IEnumerator SpawnWave()
-    {
-        waveCount += 1;
-        PlayerStats.Rounds += 1;
+	private int waveIndex = 0;
 
-        for (int i = 0; i < waveCount; i++)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
-        }
+	void Update()
+	{
+		if (EnemiesAlive > 0)
+		{
+			return;
+		}
 
-    }
-    void SpawnEnemy()
-    {
-        Instantiate(insect, spawnpoint.position, spawnpoint.rotation);
-        enemiesAlive++;
-    }
+		if (waveIndex == waves.Length)
+		{
+			gameManager.WinLevel();
+			this.enabled = false;
+		}
+
+		if (EnemiesAlive <= 0)
+		{
+			StartCoroutine(SpawnWave());
+			return;
+		}
+
+		waveCountdownText.text = waveIndex.ToString() + "/30";
+	}
+
+	IEnumerator SpawnWave()
+	{
+		PlayerStats.Rounds++;
+
+		Wave wave = waves[waveIndex];
+
+		EnemiesAlive = wave.count;
+
+		for (int i = 0; i < wave.count; i++)
+		{
+			SpawnEnemy(wave.enemy);
+			yield return new WaitForSeconds(1f / wave.rate);
+		}
+
+		waveIndex++;
+	}
+
+	void SpawnEnemy(GameObject enemy)
+	{
+		Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+		EnemiesAlive++;
+	}
+
 }

@@ -3,92 +3,132 @@ using UnityEngine.EventSystems;
 
 public class Nodes : MonoBehaviour
 {
-    public Color hovercolor;
-    public Color notEnoughMoney;
-    public Vector3 positionOffset;
 
-    public static bool isSelected = false;
+	public Color hoverColor;
+	public Color notEnoughMoneyColor;
+	public Vector3 positionOffset;
 
-    [Header("Optional")]
-    public GameObject turret;
+	[HideInInspector]
+	public GameObject turret;
+	[HideInInspector]
+	public TurretBlueprint turretBlueprint;
+	[HideInInspector]
+	public bool isUpgraded = false;
 
-    private Color startcolor;
-    private Renderer rend;
+	private Renderer rend;
+	private Color startColor;
 
-    BuildManager buildManager;
+	BuildManager buildManager;
 
-    
-    void Start()
-    {
-        rend = GetComponent<Renderer>();
-        startcolor = rend.material.color;
+	void Start()
+	{
+		rend = GetComponent<Renderer>();
+		startColor = rend.material.color;
 
-        positionOffset.y = 0.1f;
+		buildManager = BuildManager.instance;
+	}
 
-        buildManager = BuildManager.instance;
-    }
+	public Vector3 GetBuildPosition()
+	{
+		return transform.position + positionOffset;
+	}
 
-    public Vector3 GetBuildPosition()
-    {
-        return transform.position + positionOffset;
-    }
-    private void OnMouseDown()
-    {
-            
-        if (turret != null && isSelected == false)
-        {
-            NodeUI.selectUI.SetActive(true);
-            NodeUI.selectUI.transform.position = transform.position;
-            isSelected = true;
-            return;
-        }
+	void OnMouseDown()
+	{
+		if (EventSystem.current.IsPointerOverGameObject())
+			return;
 
-        if(isSelected == true)
-        {
-            NodeUI.selectUI.SetActive(false);
-            isSelected = false;
-            return;
-        }
+		if (turret != null)
+		{
+			buildManager.SelectNode(this);
+			return;
+		}
 
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            Debug.Log("Pointer is over a gameobject!");
-            return;
-        }
+		if (!buildManager.CanBuild)
+			return;
 
-        buildManager.BuildTurretOn(this);
+		BuildTurret(buildManager.GetTurretToBuild());
+	}
 
-        Debug.Log("Deselect");
-        
-        buildManager.SelectTurretToBuild(null);
-        
-        if (!buildManager.CanBuild)
-        {
-            Debug.Log("No frog selected");
-            return;
-        }
-    }
+	void BuildTurret(TurretBlueprint blueprint)
+	{
+		if (PlayerStats.Money < blueprint.cost)
+		{
+			Debug.Log("Not enough money to build that!");
+			return;
+		}
 
-    private void OnMouseEnter()
-    {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+		PlayerStats.Money -= blueprint.cost;
 
-        if (!buildManager.CanBuild)
-            return;
+		GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+		turret = _turret;
 
-        if (buildManager.HasMoney)
-        {
-            rend.material.color = hovercolor;
-        }
-        else
-        {
-            rend.material.color = Color.red;
-        }
-    }
+		turretBlueprint = blueprint;
 
-    private void OnMouseExit()
-    {
-        rend.material.color = startcolor;
-    }
+		GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+		Destroy(effect, 5f);
+
+		Debug.Log("Turret build!");
+	}
+
+	public void UpgradeTurret()
+	{
+		if (PlayerStats.Money < turretBlueprint.upgradeCost)
+		{
+			Debug.Log("Not enough money to upgrade that!");
+			return;
+		}
+
+		PlayerStats.Money -= turretBlueprint.upgradeCost;
+
+		//Get rid of the old turret
+		Destroy(turret);
+
+		//Build a new one
+		GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+		turret = _turret;
+
+		GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
+		Destroy(effect, 5f);
+
+		isUpgraded = true;
+
+		Debug.Log("Turret upgraded!");
+	}
+
+	public void SellTurret()
+	{
+		PlayerStats.Money += turretBlueprint.GetSellAmount();
+
+		GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
+		Destroy(effect, 5f);
+
+		Destroy(turret);
+		turretBlueprint = null;
+	}
+
+	void OnMouseEnter()
+	{
+		if (EventSystem.current.IsPointerOverGameObject())
+			return;
+
+		if (!buildManager.CanBuild)
+			return;
+
+		if (buildManager.HasMoney)
+		{
+			rend.material.color = hoverColor;
+		}
+		else
+		{
+			rend.material.color = notEnoughMoneyColor;
+		}
+
+	}
+
+	void OnMouseExit()
+	{
+		rend.material.color = startColor;
+	}
+
 }

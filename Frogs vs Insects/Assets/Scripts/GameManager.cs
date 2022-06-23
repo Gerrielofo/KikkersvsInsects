@@ -1,45 +1,40 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool GameIsOver = false;
+	public static bool GameIsOver;
 
-    public GameObject gameOverUI;
+	public GameObject gameOverUI;
+	public GameObject completeLevelUI;
 
-    public GameObject victoryUI;
+	void Start()
+	{
+		GameIsOver = false;
+	}
 
-    public GameObject buttonsUI;
-    private void Start()
-    {
-        GameIsOver = false;
-    }
-    void Update()
-    {
-        if (GameIsOver)
-            return;
-        if (PlayerStats.Lives <= 0)
-        {
-            EndGame();
-        }
-        if(PlayerStats.Rounds >= 30)
-        {
-            Victory();
-        }
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		if (GameIsOver)
+			return;
 
-    void EndGame()
-    {
-        GameIsOver = true;
+		if (PlayerStats.Lives <= 0)
+		{
+			EndGame();
+		}
+	}
 
-        gameOverUI.SetActive(true);
-        buttonsUI.SetActive(false);
-    }
-    void Victory()
-    {
-        GameIsOver = true;
+	void EndGame()
+	{
+		GameIsOver = true;
+		gameOverUI.SetActive(true);
+	}
 
-        victoryUI.SetActive(true);
-        buttonsUI.SetActive(false);
-    }
+	public void WinLevel()
+	{
+		GameIsOver = true;
+		completeLevelUI.SetActive(true);
+	}
+
 }

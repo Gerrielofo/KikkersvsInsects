@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3288197123474354760}
   - component: {fileID: 3755857137966005644}
   - component: {fileID: -561905748096785824}
+  - component: {fileID: -5181580877914739882}
   m_Layer: 0
   m_Name: Larve
   m_TagString: Enemy
@@ -58,10 +59,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14ddc46d4a24e947aad18e9dbe3cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpeed: 10
   speed: 4
-  health: 100
-  gainMoney: 25
+  startHealth: 100
+  worth: 25
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
+  healthBar: {fileID: 0}
+--- !u!114 &-5181580877914739882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302012569202760259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a4999cb11f0e44a9f780d1528dd62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  moveSpeed: 2
+  waypointIndex: 0
 --- !u!1001 &8091771477126004973
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -43,6 +43,6 @@ public class ShopManagerScript : MonoBehaviour
 
     void Update()
     {
-        cashAmount.text = "$" + PlayerStats.money;
+        cashAmount.text = "$" + PlayerStats.Money;
     }
 }

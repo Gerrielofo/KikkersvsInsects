@@ -38,6 +38,7 @@ public class WaypointSystem : MonoBehaviour
     void EndPath()
     {
         PlayerStats.Lives -= 5;
+        WaveSystem.EnemiesAlive--;
         Destroy(gameObject);
         return;
     }
