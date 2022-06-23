@@ -954,6 +954,7 @@ GameObject:
   - component: {fileID: 367868127}
   - component: {fileID: 367868128}
   - component: {fileID: 367868129}
+  - component: {fileID: 367868130}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -977,9 +978,9 @@ MonoBehaviour:
   - enemy: {fileID: 4302012569202760259, guid: 56f3ec1890d824f409dd0d02d2eefdff, type: 3}
     count: 5
     rate: 2
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
+  - enemy: {fileID: 6525718033416220463, guid: dcc52fcb051e14b4086bfcad67b182d8, type: 3}
+    count: 5
+    rate: 2
   - enemy: {fileID: 0}
     count: 0
     rate: 0
@@ -1141,6 +1142,43 @@ MonoBehaviour:
   upgradeCost: {fileID: 1082257323246682376}
   upgradeButton: {fileID: 1082257324013966032}
   sellAmount: {fileID: 1082257323154891725}
+--- !u!114 &367868130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367868123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db6e6a66e5e23b43adbeb7359963f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bert:
+    prefab: {fileID: 9014315370750879892, guid: c5957d7c86908744e9feea02c1eab874, type: 3}
+    cost: 100
+    upgradedPrefab: {fileID: 9014315370750879892, guid: 2ace9594d9c654f49a5d6a0e2745d2a0, type: 3}
+    upgradeCost: 100
+  edward:
+    prefab: {fileID: 0}
+    cost: 0
+    upgradedPrefab: {fileID: 0}
+    upgradeCost: 0
+  esmee:
+    prefab: {fileID: 4712912954987744892, guid: 20973ba086af7f446bb1716b6f35bb11, type: 3}
+    cost: 300
+    upgradedPrefab: {fileID: 4712912954987744892, guid: 20973ba086af7f446bb1716b6f35bb11, type: 3}
+    upgradeCost: 200
+  bob:
+    prefab: {fileID: 6525881869933142788, guid: e63e2aeda61f72e44970ad1dbea7819b, type: 3}
+    cost: 200
+    upgradedPrefab: {fileID: 6525881869933142788, guid: e63e2aeda61f72e44970ad1dbea7819b, type: 3}
+    upgradeCost: 150
+  paul:
+    prefab: {fileID: 8203950221299996777, guid: 3af1fd781fb37ba439af9685bf4599d3, type: 3}
+    cost: 500
+    upgradedPrefab: {fileID: 8203950221299996777, guid: 3af1fd781fb37ba439af9685bf4599d3, type: 3}
+    upgradeCost: 300
 --- !u!1 &405147758
 GameObject:
   m_ObjectHideFlags: 0

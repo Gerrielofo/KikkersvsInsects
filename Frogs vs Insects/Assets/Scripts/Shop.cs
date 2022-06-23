@@ -35,7 +35,7 @@ public class Shop : MonoBehaviour
         }
         //if (Input.GetKeyDown(KeyCode.Alpha5))
         //{
-        //    SelecteerPaul();
+        //    SelecteerEdward();
         //}
     }
     public void SelecteerBert()
