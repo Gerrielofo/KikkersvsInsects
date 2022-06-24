@@ -26,7 +26,7 @@ public class NodeUI : MonoBehaviour
 
 		if (!target.isUpgraded)
 		{
-			upgradeCost.text = "$" + target.turretBlueprint.upgradeCost;
+			upgradeCost.text = "UPGRADE $" + target.turretBlueprint.upgradeCost;
 			upgradeButton.interactable = true;
 		}
 		else
@@ -35,7 +35,7 @@ public class NodeUI : MonoBehaviour
 			upgradeButton.interactable = false;
 		}
 
-		sellAmount.text = "$" + target.turretBlueprint.GetSellAmount();
+		sellAmount.text = "SELL $" + target.turretBlueprint.GetSellAmount();
 
 		ui.SetActive(true);
 	}

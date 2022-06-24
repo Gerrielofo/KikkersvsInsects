@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
-
 	public float startSpeed = 10f;
 
 	[HideInInspector]
@@ -53,6 +52,7 @@ public class EnemyMovement : MonoBehaviour
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 5f);
 
+		WaveSystem.EnemiesAlive--;
 
 		Destroy(gameObject);
 	}

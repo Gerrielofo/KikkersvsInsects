@@ -22,6 +22,9 @@ public class WaveSystem : MonoBehaviour
 
 	void Update()
 	{
+		if (OptionsUI.wantOptions == true)
+			return;
+
 		if (EnemiesAlive > 0)
 		{
 			return;

@@ -9,8 +9,21 @@ public class OptionsUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            wantOptions = !wantOptions;
-            optionsUI.SetActive(wantOptions);
+            Toggle();
+        }
+    }
+
+    public void Toggle()
+    {
+        optionsUI.SetActive(!optionsUI.activeSelf);
+
+        if (optionsUI.activeSelf)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 }
