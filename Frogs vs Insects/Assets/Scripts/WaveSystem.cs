@@ -14,7 +14,8 @@ public class WaveSystem : MonoBehaviour
 	public float timeBetweenWaves = 5f;
 	private float countdown = 2f;
 
-	public Text waveCountdownText;
+	public Text roundsSurvivedTxt;
+	//public int roundCount = 1;
 
 	public GameManager gameManager;
 
@@ -36,19 +37,21 @@ public class WaveSystem : MonoBehaviour
 			this.enabled = false;
 		}
 
+		roundsSurvivedTxt.text = PlayerStats.Rounds.ToString() + "/" + waves.Length.ToString();
+
 		if (EnemiesAlive <= 0)
 		{
 			StartCoroutine(SpawnWave());
 			return;
 		}
 
-		waveCountdownText.text = waveIndex.ToString() + "/30";
 	}
 
 	IEnumerator SpawnWave()
 	{
 		PlayerStats.Rounds++;
-
+		//roundCount++;
+		Debug.Log(PlayerStats.Rounds + "Rounds");
 		Wave wave = waves[waveIndex];
 
 		EnemiesAlive = wave.count;
@@ -59,13 +62,12 @@ public class WaveSystem : MonoBehaviour
 			yield return new WaitForSeconds(1f / wave.rate);
 		}
 
-		waveIndex++;
+		waveIndex += 1;
 	}
 
 	void SpawnEnemy(GameObject enemy)
 	{
 		Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-		EnemiesAlive++;
 	}
 
 }

@@ -5,7 +5,7 @@ using System.Collections;
 public class WaypointSystem : MonoBehaviour
 {
 	private Transform target;
-	private int wavepointIndex = 0;
+	private int waypointindex = 0;
 
 	private EnemyMovement enemy;
 
@@ -32,14 +32,14 @@ public class WaypointSystem : MonoBehaviour
 
 	void GetNextWaypoint()
 	{
-		if (wavepointIndex >= Waypoint.points.Length - 1)
+		if (waypointindex >= Waypoint.points.Length - 1)
 		{
 			EndPath();
 			return;
 		}
 
-		wavepointIndex++;
-		target = Waypoint.points[wavepointIndex];
+		waypointindex++;
+		target = Waypoint.points[waypointindex];
 	}
 
 	void EndPath()

@@ -54,6 +54,7 @@ public class EnemyMovement : MonoBehaviour
 
 		WaveSystem.EnemiesAlive--;
 
+		Debug.Log(WaveSystem.EnemiesAlive);
 		Destroy(gameObject);
 	}
 

@@ -34,9 +34,6 @@ public class Frog : MonoBehaviour
 
     void UpdateTarget()
     {
-        if (GameManager.GameIsOver == true)
-            return;
-
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -62,12 +59,6 @@ public class Frog : MonoBehaviour
     
     void Update()
     {
-        if (OptionsUI.wantOptions == true)
-        {
-            //Debug.Log("frog paused");
-            return;
-        }
-
         if (target == null)
             return;
 

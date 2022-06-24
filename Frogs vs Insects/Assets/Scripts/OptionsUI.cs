@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OptionsUI : MonoBehaviour
 {
     public GameObject optionsUI;
     public static bool wantOptions = false;
+    public GameObject hudUI;
+    
+    public SceneFader sceneFader;
+    public string menuSceneName = "MainMenu";
  
     void Update()
     {
@@ -16,7 +21,8 @@ public class OptionsUI : MonoBehaviour
     public void Toggle()
     {
         optionsUI.SetActive(!optionsUI.activeSelf);
-
+        hudUI.SetActive(!hudUI.activeSelf);
+        wantOptions = !wantOptions;
         if (optionsUI.activeSelf)
         {
             Time.timeScale = 0f;
@@ -25,5 +31,17 @@ public class OptionsUI : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
+    }
+
+    public void Retry()
+    {
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+        Toggle();
+    }
+
+    public void Menu()
+    {
+        sceneFader.FadeTo(menuSceneName);
+        Toggle();
     }
 }
