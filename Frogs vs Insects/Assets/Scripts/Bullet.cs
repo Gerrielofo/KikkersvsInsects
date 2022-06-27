@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -11,6 +12,10 @@ public class Bullet : MonoBehaviour
 
     public float explosionRadius = 0f;
     public GameObject impactEffect;
+
+    public static bool wantDOT;
+    public float dot;
+    public float dotDuration;
 
     public void Seek (Transform _target)
     {
@@ -47,9 +52,13 @@ public class Bullet : MonoBehaviour
         {
             Explode();
         }
-        else
+        if(explosionRadius < 0 && wantDOT == false)
         {
             Damage(target);
+        }
+        if(wantDOT == true)
+        {
+            DamageOverTime();
         }
         
         Destroy(gameObject);
@@ -76,6 +85,16 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    void DamageOverTime()
+    {
+        if (wantDOT == false)
+            return;
+        if (dotDuration < 0)
+        {
+            ApplyDOT.doDot = true;
+            ApplyDOT.dotDuration = dotDuration;
+        }
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

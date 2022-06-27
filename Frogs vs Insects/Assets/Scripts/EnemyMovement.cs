@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
 	public float speed;
 
 	public float startHealth = 100;
-	private float health;
+	public static float health;
 
 	public int worth = 50;
 

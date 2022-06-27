@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 2464219718324379675}
   - component: {fileID: 2988554429957716643}
   - component: {fileID: 2988554429957716642}
+  - component: {fileID: 3114757953809330362}
   m_Layer: 0
   m_Name: Larve
   m_TagString: Enemy
@@ -158,6 +159,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a4999cb11f0e44a9f780d1528dd62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3114757953809330362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988554429957716641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821b5df5f58fd43478af0fa140dc60b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dot: 10
 --- !u!1 &3932150929888088714
 GameObject:
   m_ObjectHideFlags: 0
