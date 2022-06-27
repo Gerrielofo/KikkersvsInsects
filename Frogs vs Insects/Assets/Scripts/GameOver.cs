@@ -13,8 +13,6 @@ public class GameOver : MonoBehaviour
     public void Start()
     {
 		roundDied.text = "You died on round " + PlayerStats.Rounds.ToString() + "!";
-
-
     }
 
     public void Retry()
@@ -26,5 +24,4 @@ public class GameOver : MonoBehaviour
 	{
 		sceneFader.FadeTo(menuSceneName);
 	}
-
 }

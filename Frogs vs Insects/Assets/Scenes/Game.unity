@@ -749,9 +749,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1683397967}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
-        m_MethodName: Retry
+      - m_Target: {fileID: 1178580678}
+        m_TargetAssemblyTypeName: OptionsUI, Assembly-CSharp
+        m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4875,6 +4875,30 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &1406606063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5928116437579085799, guid: a3a966b2293839846ac42aa3e51b2af6, type: 3}
+  m_PrefabInstance: {fileID: 6321173675628377234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1406606064
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406606063}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd3d1f94d741fff40a455cb8c888a41f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1448095588
 GameObject:
   m_ObjectHideFlags: 0
@@ -8429,11 +8453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6417408266573081949, guid: a3a966b2293839846ac42aa3e51b2af6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 6417408266573081949, guid: a3a966b2293839846ac42aa3e51b2af6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.67
       objectReference: {fileID: 0}
     - target: {fileID: 6417408266573081949, guid: a3a966b2293839846ac42aa3e51b2af6, type: 3}
       propertyPath: m_LocalRotation.w

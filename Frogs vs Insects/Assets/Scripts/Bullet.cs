@@ -14,8 +14,7 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
 
     public static bool wantDOT;
-    public float dot;
-    public float dotDuration;
+    public float dotDuration = 5f;
 
     public void Seek (Transform _target)
     {
@@ -87,13 +86,7 @@ public class Bullet : MonoBehaviour
 
     void DamageOverTime()
     {
-        if (wantDOT == false)
-            return;
-        if (dotDuration < 0)
-        {
-            ApplyDOT.doDot = true;
-            ApplyDOT.dotDuration = dotDuration;
-        }
+        ApplyDOT.DoDps(); 
     }
     private void OnDrawGizmosSelected()
     {

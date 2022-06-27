@@ -24,11 +24,15 @@ public class Frog : MonoBehaviour
     public int upgradeCost;
 
     public string enemyTag = "Enemy";
-
+    public static bool enableDot = false;
 
     
     void Start()
     {
+        if(enableDot == true)
+        {
+            Bullet.wantDOT = true;
+        }
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 

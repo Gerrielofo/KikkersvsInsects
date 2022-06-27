@@ -144,6 +144,7 @@ MonoBehaviour:
   startSpeed: 5
   speed: 0
   startHealth: 75
+  health: 0
   worth: 25
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 7936732968352414556}
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821b5df5f58fd43478af0fa140dc60b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dot: 10
+  dot: 20
 --- !u!1 &3932150929888088714
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +312,7 @@ MonoBehaviour:
   startSpeed: 5
   speed: 0
   startHealth: 75
+  health: 0
   worth: 25
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 7936732968352414556}

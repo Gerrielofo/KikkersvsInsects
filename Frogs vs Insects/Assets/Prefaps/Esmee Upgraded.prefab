@@ -135,6 +135,7 @@ MonoBehaviour:
   sellAmount: 200
   upgradeCost: 350
   enemyTag: Enemy
+  enableDot: 1
 --- !u!1 &6601121349290077493
 GameObject:
   m_ObjectHideFlags: 0

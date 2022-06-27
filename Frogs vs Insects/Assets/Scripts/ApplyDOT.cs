@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class ApplyDOT : MonoBehaviour
 {
-
     public static bool doDot = false;
     public float dot = 10f;
     public static float dotDuration = 5f;
     public static bool dotIsOn;
-    IEnumerator Dps()
+
+
+    IEnumerator Dps(Transform enemy)
     {
-        yield return new WaitForSeconds(1);
+        EnemyMovement e = enemy.GetComponent<EnemyMovement>();
 
         dotIsOn = true;
+        dotDuration = 5f;
         while (dotDuration > 0)
         {
-            EnemyMovement.health -= dot;
+            e.TakeDamage(dot);
+            Debug.Log("Dot");
             yield return new WaitForSeconds(1);
         }
         dotIsOn = false;
@@ -25,8 +28,20 @@ public class ApplyDOT : MonoBehaviour
 
     void Update()
     {
-        dotDuration -= Time.deltaTime;
-        if(doDot == true && dotIsOn == false)
-        StartCoroutine(Dps());
+        if (dotDuration > 0) 
+        { 
+            dotDuration -= Time.deltaTime;
+            if(dotDuration == 5f)
+            {
+                EnemyMovement e = GetComponent<EnemyMovement>();
+
+                StartCoroutine(Dps(e.transform));
+            }         
+        }
+    }
+
+    public static void DoDps()
+    {
+        dotDuration = 5f;
     }
 }
