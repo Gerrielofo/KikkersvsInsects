@@ -18,6 +18,8 @@ public class WaypointSystem : MonoBehaviour
 
 	void Update()
 	{
+		if (OptionsUI.wantOptions == true || GameManager.GameIsOver == true)
+			return;
 		Vector3 dir = target.position - transform.position;
 		transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
 

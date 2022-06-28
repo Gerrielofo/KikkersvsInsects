@@ -45,15 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88311c87a9dec90498fef2965c3ddada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 7
   fireRate: 1
   partToRotate: {fileID: 4479508127674626368}
   turnSpeed: 30
-  bulletPrefab: {fileID: 3087844780777530006, guid: 289286c478b62e04faffb5a6885fdff2, type: 3}
+  bulletPrefab: {fileID: 3087844780777530006, guid: ee66f0be6eb9a9c4db15cf15d0cb97e3, type: 3}
   firePoint: {fileID: 6599170603250840334}
-  sellAmount: 50
+  sellAmount: 100
   upgradeCost: 100
   enemyTag: Enemy
+  enableDot: 0
 --- !u!1 &7011314891016218971
 GameObject:
   m_ObjectHideFlags: 0

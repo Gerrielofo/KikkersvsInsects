@@ -3757,8 +3757,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1683397967}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+      - m_Target: {fileID: 1178580678}
+        m_TargetAssemblyTypeName: OptionsUI, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
@@ -7331,7 +7331,7 @@ MonoBehaviour:
   - {fileID: 1849180287}
   - {fileID: 400111633}
   - {fileID: 1164373266}
-  moveSpeed: 100
+  moveSpeed: 2
   fish: {fileID: 1406606063}
 --- !u!1 &1448095588
 GameObject:
@@ -8199,8 +8199,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1683397967}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+      - m_Target: {fileID: 1178580678}
+        m_TargetAssemblyTypeName: OptionsUI, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
