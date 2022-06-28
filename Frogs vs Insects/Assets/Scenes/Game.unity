@@ -7331,7 +7331,7 @@ MonoBehaviour:
   - {fileID: 1849180287}
   - {fileID: 400111633}
   - {fileID: 1164373266}
-  moveSpeed: 2
+  moveSpeed: 100
   fish: {fileID: 1406606063}
 --- !u!1 &1448095588
 GameObject:

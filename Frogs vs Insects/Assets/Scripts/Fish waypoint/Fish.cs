@@ -28,12 +28,13 @@ public class Fish : MonoBehaviour
     void Move()
     {
         transform.position = Vector3.MoveTowards(transform.position, waypoints[waypointsIndex].transform.position, moveSpeed * Time.deltaTime);
+        
         if(transform.position == waypoints[waypointsIndex].transform.position)
         {
+            transform.LookAt(waypoints[waypointsIndex].position);
             waypointsIndex += 1;
-            transform.LookAt(waypoints[waypointsIndex]);
-
         }
+       
         if(waypointsIndex == waypoints.Length)
         {
             waypointsIndex = 0;
