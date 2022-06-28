@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class OptionsUI : MonoBehaviour
@@ -6,7 +7,7 @@ public class OptionsUI : MonoBehaviour
     public GameObject optionsUI;
     public static bool wantOptions = false;
     public GameObject hudUI;
-    
+
     public SceneFader sceneFader;
     public string menuSceneName = "MainMenu";
  

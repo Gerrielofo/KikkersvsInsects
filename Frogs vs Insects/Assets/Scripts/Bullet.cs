@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour
     public GameObject impactEffect;
 
     public static bool wantDOT;
-    public float dotDuration = 5f;
 
     public void Seek (Transform _target)
     {
@@ -50,14 +49,17 @@ public class Bullet : MonoBehaviour
         if(explosionRadius > 0)
         {
             Explode();
+            Debug.LogError("Explode");
         }
-        if(explosionRadius < 0 && wantDOT == false)
+        if(explosionRadius <= 0 && wantDOT == false)
         {
+            Debug.LogError("Normal shoot");
             Damage(target);
         }
         if(wantDOT == true)
         {
             DamageOverTime();
+            Debug.LogError("To ApplyDOT");
         }
         
         Destroy(gameObject);
@@ -77,10 +79,11 @@ public class Bullet : MonoBehaviour
     void Damage(Transform enemy)    
     {
         EnemyMovement e = enemy.GetComponent<EnemyMovement>();
-
-        if(e != null)
+        Debug.LogError("Damage");
+        if (e != null)
         {
             e.TakeDamage(damage);
+            
         }
     }
 

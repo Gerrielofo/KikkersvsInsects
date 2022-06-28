@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 using UnityEngine.UI;
 
 public class WaveSystem : MonoBehaviour
@@ -14,7 +15,8 @@ public class WaveSystem : MonoBehaviour
 	public float timeBetweenWaves = 5f;
 	private float countdown = 2f;
 
-	public Text roundsSurvivedTxt;
+	public Text roundsSurvivedtxt;
+	//public Text roundsSurvivedTxt;
 	//public int roundCount = 1;
 
 	public GameManager gameManager;
@@ -37,7 +39,7 @@ public class WaveSystem : MonoBehaviour
 			this.enabled = false;
 		}
 
-		roundsSurvivedTxt.text = PlayerStats.Rounds.ToString() + "/" + waves.Length.ToString();
+		roundsSurvivedtxt.text = PlayerStats.Rounds.ToString() + "/" + waves.Length.ToString();
 
 		if (EnemiesAlive <= 0)
 		{
@@ -51,7 +53,6 @@ public class WaveSystem : MonoBehaviour
 	{
 		PlayerStats.Rounds++;
 		//roundCount++;
-		Debug.Log(PlayerStats.Rounds + "Rounds");
 		Wave wave = waves[waveIndex];
 
 		EnemiesAlive = wave.count;

@@ -31,7 +31,7 @@ public class Fish : MonoBehaviour
         if(transform.position == waypoints[waypointsIndex].transform.position)
         {
             waypointsIndex += 1;
-            transform.Rotate(new Vector3(0f, 0f, 0f));
+            transform.LookAt(waypoints[waypointsIndex]);
 
         }
         if(waypointsIndex == waypoints.Length)

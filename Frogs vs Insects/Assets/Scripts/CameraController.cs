@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private bool doMovement = true;
-    private bool doMouseMovement = true;
+    private bool doMouseMovement = false;
 
     [Header("Zoom")]
     public float scrollSpeed = 5f;

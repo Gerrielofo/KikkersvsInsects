@@ -70,8 +70,6 @@ public class Nodes : MonoBehaviour
 
 		GameObject effect = (GameObject)Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
 		Destroy(effect, 5f);
-
-		Debug.Log("Turret build!");
 	}
 
 	public void UpgradeTurret()

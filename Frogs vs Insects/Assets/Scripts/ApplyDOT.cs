@@ -30,13 +30,13 @@ public class ApplyDOT : MonoBehaviour
     {
         if (dotDuration > 0) 
         { 
-            dotDuration -= Time.deltaTime;
             if(dotDuration == 5f)
             {
                 EnemyMovement e = GetComponent<EnemyMovement>();
 
                 StartCoroutine(Dps(e.transform));
-            }         
+            }
+            dotDuration -= Time.deltaTime;
         }
     }
 
