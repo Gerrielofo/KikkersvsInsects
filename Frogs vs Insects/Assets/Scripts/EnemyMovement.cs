@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
 	public Image healthBar;
 
 	private bool isDead = false;
+	public bool hasDot;
 
 	void Start()
 	{
@@ -28,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
 
 	public void TakeDamage(float amount)
 	{
+		print("Doing damg!");
 		health -= amount;
 
 		healthBar.fillAmount = health / startHealth;
@@ -37,11 +40,27 @@ public class EnemyMovement : MonoBehaviour
 			Die();
 		}
 	}
+	public IEnumerator DamageOverTime(float dotDuration,float dotDamgPerTick, GameObject bullet)
+	{
+		hasDot = true;
+		float dotTimer = 0;
+		print("Starting Dot");
+		Debug.Log(dotDuration);
+		while (dotTimer < dotDuration)
+		{
+			dotTimer += 1;
+			TakeDamage(dotDamgPerTick);
+			print("Doing dot damg!! with timer of : " + dotTimer.ToString());
+			yield return new WaitForSeconds(1);
+		}
+		hasDot = false;
+	}
 
 	public void Slow(float pct)
 	{
 		speed = startSpeed * (1f - pct);
 	}
+
 
 	void Die()
 	{
@@ -54,7 +73,6 @@ public class EnemyMovement : MonoBehaviour
 
 		WaveSystem.EnemiesAlive--;
 
-		Debug.Log(WaveSystem.EnemiesAlive);
 		Destroy(gameObject);
 	}
 

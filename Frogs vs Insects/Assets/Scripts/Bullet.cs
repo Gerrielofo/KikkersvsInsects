@@ -12,12 +12,13 @@ public class Bullet : MonoBehaviour
 
     public float explosionRadius = 0f;
     public GameObject impactEffect;
+    public float dotDamgPerTick;
+    public float dotDuration = 5;
+    public bool doesDotDamg;
 
-    public static bool wantDOT;
-
-    public void Seek (Transform _target)
+    public void Seek (Transform newTarget)
     {
-        target = _target;
+        target = newTarget;
     }
 
     // Update is called once per frame
@@ -42,24 +43,25 @@ public class Bullet : MonoBehaviour
         transform.LookAt(target);
     }
     void HitTarget()
-    {
+    {    
+        
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
-
+             
         if(explosionRadius > 0)
         {
             Explode();
-            Debug.LogError("Explode");
         }
-        if(explosionRadius <= 0 && wantDOT == false)
+        else if(doesDotDamg == false)
         {
-            Debug.LogError("Normal shoot");
-            Damage(target);
+            Damage(damage);
         }
-        if(wantDOT == true)
+        if(doesDotDamg == true)
         {
-            DamageOverTime();
-            Debug.LogError("To ApplyDOT");
+            if(target.GetComponent<EnemyMovement>().hasDot == false)
+            {
+                target.GetComponent<EnemyMovement>().StartCoroutine(target.GetComponent<EnemyMovement>().DamageOverTime(dotDuration,dotDamgPerTick, this.gameObject));
+            }
         }
         
         Destroy(gameObject);
@@ -72,25 +74,21 @@ public class Bullet : MonoBehaviour
         {
             if(collider.tag == "Enemy")
             {
-                Damage(collider.transform);
+                Damage(damage);
             }
         }
     }
-    void Damage(Transform enemy)    
+    void Damage(float damgToDo)    
     {
-        EnemyMovement e = enemy.GetComponent<EnemyMovement>();
-        Debug.LogError("Damage");
+        EnemyMovement e = target.GetComponent<EnemyMovement>();
         if (e != null)
         {
-            e.TakeDamage(damage);
+            e.TakeDamage(damgToDo);
             
         }
     }
 
-    void DamageOverTime()
-    {
-        ApplyDOT.DoDps(); 
-    }
+   
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
