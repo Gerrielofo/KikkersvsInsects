@@ -40,27 +40,27 @@ public class Shop : MonoBehaviour
     }
     public void SelecteerBert()
     {
-        Debug.Log("Bert selected");
+        //Debug.Log("Bert selected");
         buildManager.SelectTurretToBuild(bert);
     }
     public void SelecteerEdward()
     {
-        Debug.Log("Edward selected");
+        //Debug.Log("Edward selected");
         buildManager.SelectTurretToBuild(edward);
     }
     public void SelecteerEsmee()
     {
-        Debug.Log("Esmee selected");
+       // Debug.Log("Esmee selected");
         buildManager.SelectTurretToBuild(esmee);
     }
     public void SelecteerBob()
     {
-        Debug.Log("Bob selected");
+        //Debug.Log("Bob selected");
         buildManager.SelectTurretToBuild(bob);
     }
     public void SelecteerPaul()
     {
-        Debug.Log("Paul selected");
+        //Debug.Log("Paul selected");
         buildManager.SelectTurretToBuild(paul);
     }
 }

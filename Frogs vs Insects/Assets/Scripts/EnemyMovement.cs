@@ -31,9 +31,10 @@ public class EnemyMovement : MonoBehaviour
 	public void TakeDamage(float amount)
 	{
 		print("Doing damg!");
+		healthBar.fillAmount = health / startHealth;
+		
 		health -= amount;
 
-		healthBar.fillAmount = health / startHealth;
 
 		if (health <= 0 && !isDead)
 		{

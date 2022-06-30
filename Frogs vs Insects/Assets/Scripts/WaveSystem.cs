@@ -16,14 +16,17 @@ public class WaveSystem : MonoBehaviour
 	private float countdown = 2f;
 
 	public Text roundsSurvivedtxt;
-	//public Text roundsSurvivedTxt;
-	//public int roundCount = 1;
+	public Text livestxt;
 
 	public GameManager gameManager;
 
 	private int waveIndex = 0;
 
-	void Update()
+    private void Start()
+    {
+		EnemiesAlive = 0;
+    }
+    void Update()
 	{
 		if (OptionsUI.wantOptions == true)
 			return;
@@ -40,8 +43,9 @@ public class WaveSystem : MonoBehaviour
 		}
 
 		roundsSurvivedtxt.text = PlayerStats.Rounds.ToString() + "/" + waves.Length.ToString();
+		livestxt.text = PlayerStats.Lives.ToString() + " Lives";
 
-		if (EnemiesAlive <= 0)
+		if (EnemiesAlive <= 0 && Input.GetButtonDown("Jump"))
 		{
 			StartCoroutine(SpawnWave());
 			return;

@@ -144,7 +144,7 @@ MonoBehaviour:
   speed: 0
   startHealth: 75
   health: 75
-  worth: 25
+  worth: 10
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 7936732968352414556}
   hasDot: 0
@@ -666,7 +666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213250048606443879, guid: 32528d013e2828d4b9b9e9036ee57041, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 89.3654
+      value: 54.3394
       objectReference: {fileID: 0}
     - target: {fileID: 4213250048606443879, guid: 32528d013e2828d4b9b9e9036ee57041, type: 3}
       propertyPath: m_SizeDelta.y
