@@ -582,8 +582,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6525718033416220463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.00083574, y: 0.096166, z: -0.01025}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
   m_Children:
   - {fileID: 8799774723020632963}
   - {fileID: 639204912103246918}
@@ -840,10 +840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14ddc46d4a24e947aad18e9dbe3cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 0.5
+  startSpeed: 1.2
   speed: 10
-  startHealth: 1500
-  health: 1500
+  startHealth: 3000
+  health: 3000
   worth: 50
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 639204912723842329}
