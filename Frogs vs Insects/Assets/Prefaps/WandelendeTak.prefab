@@ -801,8 +801,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8166368423566862649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0063732, y: -0.148, z: 0.07817}
+  m_LocalScale: {x: 1.533758, y: 1.533758, z: 1.533758}
   m_Children:
   - {fileID: 481816089331819293}
   - {fileID: 414637375575914419}
@@ -840,10 +840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14ddc46d4a24e947aad18e9dbe3cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 4
+  startSpeed: 0.5
   speed: 10
-  startHealth: 125
-  health: 125
+  startHealth: 1500
+  health: 1500
   worth: 50
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 639204912723842329}
@@ -1130,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213250048606443879, guid: 32528d013e2828d4b9b9e9036ee57041, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.262
       objectReference: {fileID: 0}
     - target: {fileID: 4213250048606443879, guid: 32528d013e2828d4b9b9e9036ee57041, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1154,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213250048606443879, guid: 32528d013e2828d4b9b9e9036ee57041, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2
+      value: 2.947
       objectReference: {fileID: 0}
     - target: {fileID: 4213250048606443879, guid: 32528d013e2828d4b9b9e9036ee57041, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
