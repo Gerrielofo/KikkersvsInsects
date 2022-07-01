@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2464219718324379675}
   - component: {fileID: 2988554429957716643}
   - component: {fileID: 2988554429957716642}
-  - component: {fileID: 252788561782775635}
+  - component: {fileID: 3321273741594970190}
   m_Layer: 0
   m_Name: Larve
   m_TagString: Enemy
@@ -141,11 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14ddc46d4a24e947aad18e9dbe3cbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 2
+  startSpeed: 4
   speed: 0
-  startHealth: 300
-  health: 300
-  worth: 25
+  startHealth: 800
+  health: 800
+  worth: 50
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 7936732968352414556}
   hasDot: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a4999cb11f0e44a9f780d1528dd62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &252788561782775635
+--- !u!95 &3321273741594970190
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 2988554429957716641}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2d3898de38818d468075648d1dd1385, type: 2}
+  m_Controller: {fileID: 9100000, guid: dceacd74ed632b5489b44db0f40b9a91, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -438,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7383412483047931529}
   m_Layer: 0
-  m_Name: Larve
+  m_Name: Larve 3.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

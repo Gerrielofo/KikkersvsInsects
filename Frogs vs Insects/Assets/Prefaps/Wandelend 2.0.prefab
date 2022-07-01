@@ -568,7 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6837993259142570378}
   m_Layer: 0
-  m_Name: WandelendeTak
+  m_Name: Wandelend 2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,9 +842,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 1.2
   speed: 10
-  startHealth: 2500
-  health: 2500
-  worth: 100
+  startHealth: 4000
+  health: 4000
+  worth: 150
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
   healthBar: {fileID: 639204912723842329}
   hasDot: 0

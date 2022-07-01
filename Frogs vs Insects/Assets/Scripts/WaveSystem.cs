@@ -45,7 +45,7 @@ public class WaveSystem : MonoBehaviour
 		roundsSurvivedtxt.text = PlayerStats.Rounds.ToString() + "/" + waves.Length.ToString();
 		livestxt.text = PlayerStats.Lives.ToString() + " Lives";
 
-		if (EnemiesAlive <= 0 && Input.GetButtonDown("Fire2"))
+		if (EnemiesAlive <= 0)
 		{
 			StartCoroutine(SpawnWave());
 			return;

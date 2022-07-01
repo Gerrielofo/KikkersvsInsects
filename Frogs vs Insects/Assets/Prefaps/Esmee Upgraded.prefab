@@ -126,11 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88311c87a9dec90498fef2965c3ddada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   range: 10
   fireRate: 1
   partToRotate: {fileID: 8068695951236639684}
   turnSpeed: 10
-  bulletPrefab: {fileID: 3087844780777530006, guid: 9976ba55f5b76574aa47ee4444cfe7c7, type: 3}
+  bulletPrefab: {fileID: 3087844780777530006, guid: 9b19b15f5c2fda0478b8206147a9344a, type: 3}
   firePoint: {fileID: 8794936562597424682}
   sellAmount: 200
   upgradeCost: 350

@@ -69,11 +69,13 @@ public class Bullet : MonoBehaviour
     }
     void Explode()
     {
+        Debug.Log("Explode");
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
         {
             if(collider.tag == "Enemy")
             {
+                Debug.Log("Explosion damage");
                 Damage(damage);
             }
         }

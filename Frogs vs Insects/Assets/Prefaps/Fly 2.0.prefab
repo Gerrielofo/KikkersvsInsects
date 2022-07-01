@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 10
   speed: 0
-  startHealth: 50
+  startHealth: 150
   health: 0
   worth: 10
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
@@ -1082,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5283118984708967249}
   m_Layer: 0
-  m_Name: Fly
+  m_Name: Fly 2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
