@@ -7,8 +7,8 @@ public class MenuManager : MonoBehaviour
     public GameObject optionsUI;
     public GameObject buttonsUI;
     public GameObject levelSelectUI;
-    public GameObject QuitUI;
-
+    public GameObject quitUI;
+    public GameObject frogInfo;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -40,18 +40,31 @@ public class MenuManager : MonoBehaviour
         buttonsUI.SetActive(true);
     }
 
+    public void FrogInfoOn()
+    {
+        frogInfo.SetActive(true);
+        optionsUI.SetActive(false);
+    }
+    public void FrogInfoOff()
+    {
+        frogInfo.SetActive(false);
+        optionsUI.SetActive(true);
+    }
+
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Game");
     }
     public void QuitOn()
     {
-        QuitUI.SetActive(true);
+        quitUI.SetActive(true);
+        buttonsUI.SetActive(false);
     }
 
     public void QuitOff()
     {
-        QuitUI.SetActive(false);
+        quitUI.SetActive(false);
+        buttonsUI.SetActive(true);
     }
     public void ExitGame()
     {
@@ -59,8 +72,8 @@ public class MenuManager : MonoBehaviour
     }
 
 
-    List<int> widths = new List<int>() { 568, 960, 1280, 1920 };
-    List<int> heights = new List<int>() { 320, 540, 800, 1080 };
+    List<int> widths = new List<int>() { 1920, 1280, 960, 568 };
+    List<int> heights = new List<int>() { 1080, 800, 540, 320 };
 
     public void SetScreenSize(int index)
     {
