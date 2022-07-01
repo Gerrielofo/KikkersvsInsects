@@ -604,7 +604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 1
   speed: 5
-  startHealth: 60000
+  startHealth: 120000
   health: 0
   worth: 250
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}
@@ -2605,7 +2605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5769666173826423960}
   m_Layer: 0
-  m_Name: HerculesKever
+  m_Name: HerculesKever Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

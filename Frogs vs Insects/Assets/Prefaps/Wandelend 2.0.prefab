@@ -843,7 +843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 1.2
   speed: 10
-  startHealth: 4000
+  startHealth: 8000
   health: 4000
   worth: 100
   deathEffect: {fileID: 7866882067997260159, guid: 05d5a47482ca9374aa5155feaf1cdc75, type: 3}

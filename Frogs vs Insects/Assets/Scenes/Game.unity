@@ -1968,7 +1968,7 @@ MonoBehaviour:
   - enemy: {fileID: 6756145428334612431, guid: 7750a63cbb510da40b65af3626b573ba, type: 3}
     count: 60
     rate: 4
-  - enemy: {fileID: 8365871741862707274, guid: 7c1dc6f4914f19e4c8eef229fc216ab8, type: 3}
+  - enemy: {fileID: 8365871741862707274, guid: 4afaa98c229dc4f41b4528fe39969336, type: 3}
     count: 10
     rate: 0.05
   - enemy: {fileID: 4763321957020275179, guid: 99424bb28ebdc5b40b3cc17462ee3506, type: 3}
@@ -1981,8 +1981,8 @@ MonoBehaviour:
     count: 200
     rate: 4
   - enemy: {fileID: 6756145428334612431, guid: c27bd4af75b0d864b8d3309ae85697f8, type: 3}
-    count: 200
-    rate: 4
+    count: 1
+    rate: 1
   spawnPoint: {fileID: 1876037538}
   timeBetweenWaves: 5.5
   roundsSurvivedtxt: {fileID: 598134102}
@@ -7803,7 +7803,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -58.4419, y: -76.8971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413241145
 MonoBehaviour:
@@ -10742,7 +10742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.56891, y: -64.5}
+  m_AnchoredPosition: {x: 48.568848, y: -64.5}
   m_SizeDelta: {x: 97.1378, y: 101.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993180978
