@@ -10,6 +10,8 @@ public class OptionsUI : MonoBehaviour
 
     public SceneFader sceneFader;
     public string menuSceneName = "MainMenu";
+
+    public bool fastForward = false;
  
     void Update()
     {
@@ -44,5 +46,19 @@ public class OptionsUI : MonoBehaviour
     {
         sceneFader.FadeTo(menuSceneName);
         Toggle();
+    }
+
+    public void FastForward()
+    {
+        if(fastForward == false)
+        {
+            Time.timeScale = 2f;
+            fastForward = true;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            fastForward = false;
+        }
     }
 }

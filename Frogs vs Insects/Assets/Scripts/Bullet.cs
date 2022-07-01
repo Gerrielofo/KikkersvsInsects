@@ -54,7 +54,7 @@ public class Bullet : MonoBehaviour
         }
         else if(doesDotDamg == false)
         {
-            Damage(damage);
+            Damage(damage,target.GetComponent<EnemyMovement>());
         }
         if(doesDotDamg == true)
         {
@@ -69,23 +69,22 @@ public class Bullet : MonoBehaviour
     }
     void Explode()
     {
-        Debug.Log("Explode");
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach (Collider collider in colliders)
         {
-            if(collider.tag == "Enemy")
+            if(collider.CompareTag("Enemy"))
             {
-                Debug.Log("Explosion damage");
-                Damage(damage);
+                Debug.Log("Explosion damage" + damage);
+                Damage(damage,collider.GetComponent<EnemyMovement>());
             }
         }
     }
-    void Damage(float damgToDo)    
+    void Damage(float damgToDo, EnemyMovement targetToDamg)    
     {
-        EnemyMovement e = target.GetComponent<EnemyMovement>();
-        if (e != null)
+        //EnemyMovement e = targetToDamg.GetComponent<EnemyMovement>();
+        if (targetToDamg != null)
         {
-            e.TakeDamage(damgToDo);
+            targetToDamg.TakeDamage(damgToDo);
             
         }
     }

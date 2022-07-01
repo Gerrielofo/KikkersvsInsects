@@ -32,10 +32,10 @@ public class Frog : MonoBehaviour
         if (target != null)
         {
 
-            //if (GameManager.GameIsOver == true)
-            //{
-            //    return;
-            //}
+            if (GameManager.GameIsOver == true)
+            {
+                return;
+            }
 
             //Target lock system
             Vector3 dir = target.position - transform.position;

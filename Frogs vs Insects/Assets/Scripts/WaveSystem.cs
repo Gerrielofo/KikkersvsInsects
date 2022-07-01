@@ -56,7 +56,7 @@ public class WaveSystem : MonoBehaviour
 	IEnumerator SpawnWave()
 	{
 		PlayerStats.Rounds++;
-		//roundCount++;
+
 		Wave wave = waves[waveIndex];
 
 		EnemiesAlive = wave.count;

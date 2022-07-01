@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 6467725532290547733}
   - component: {fileID: 986719333417797674}
   - component: {fileID: 1248643244727160137}
+  - component: {fileID: 6570764733425333317}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Enemy
@@ -210,6 +211,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a4999cb11f0e44a9f780d1528dd62d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6570764733425333317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425752610192064257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5884503, y: 0.54466677, z: 1.0390146}
+  m_Center: {x: 0.024311066, y: 0.30683744, z: -0.019507349}
 --- !u!1 &536449817581467399
 GameObject:
   m_ObjectHideFlags: 0

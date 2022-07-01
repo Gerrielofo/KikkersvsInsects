@@ -30,10 +30,9 @@ public class EnemyMovement : MonoBehaviour
 
 	public void TakeDamage(float amount)
 	{
-		print("Doing damg!");
-		healthBar.fillAmount = health / startHealth;
-		
 		health -= amount;
+		
+		healthBar.fillAmount = health / startHealth;
 
 
 		if (health <= 0 && !isDead)
@@ -45,13 +44,11 @@ public class EnemyMovement : MonoBehaviour
 	{
 		hasDot = true;
 		float dotTimer = 0;
-		print("Starting Dot");
 		Debug.Log(dotDuration);
 		while (dotTimer < dotDuration)
 		{
 			dotTimer += 1;
 			TakeDamage(dotDamgPerTick);
-			print("Doing dot damg!! with timer of : " + dotTimer.ToString());
 			yield return new WaitForSeconds(1);
 		}
 		hasDot = false;
