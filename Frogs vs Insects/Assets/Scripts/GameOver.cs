@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
 
     public void Start()
     {
-		roundDied.text = "You died on round " + PlayerStats.Rounds.ToString() + "!";
+		roundDied.text = "You almost made it to round " + PlayerStats.Rounds.ToString() + "!";
     }
 
     public void Retry()

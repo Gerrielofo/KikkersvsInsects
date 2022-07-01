@@ -28,6 +28,8 @@ public class WaveSystem : MonoBehaviour
     }
     void Update()
 	{
+		livestxt.text = PlayerStats.Lives.ToString() + " Lives";
+
 		if (OptionsUI.wantOptions == true)
 			return;
 
@@ -43,7 +45,7 @@ public class WaveSystem : MonoBehaviour
 		}
 
 		roundsSurvivedtxt.text = PlayerStats.Rounds.ToString() + "/" + waves.Length.ToString();
-		livestxt.text = PlayerStats.Lives.ToString() + " Lives";
+		
 
 		if (EnemiesAlive <= 0)
 		{

@@ -19,6 +19,10 @@ public class OptionsUI : MonoBehaviour
         {
             Toggle();
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            FastForward();
+        }
     }
 
     public void Toggle()
