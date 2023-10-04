@@ -9,7 +9,7 @@ public class DevTools : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            PlayerStats.Money += 100000;
+            PlayerStats.Money += 100;
         }
 
         if (Input.GetKeyDown(KeyCode.L))
