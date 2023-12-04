@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stillgrass
   m_Shader: {fileID: -6465566751694194690, guid: 10d07569ddc8c56429f8a8fb87e9bca4, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -43,9 +44,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_42bd14b8bb664ea4a9d3b0b40ccde9a5: 8.03
     - Vector1_adb5d22ca3c1440380fba9e281c82437: 0.3
+    - _QueueControl: 1
+    - _QueueOffset: 0
     m_Colors:
     - Vector2_58af4fec3dfb45e8af6eb92c3659d3e2: {r: 6, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
@@ -61,4 +65,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 4
+  version: 5
