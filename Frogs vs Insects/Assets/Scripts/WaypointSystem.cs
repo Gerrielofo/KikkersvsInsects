@@ -8,7 +8,6 @@ public class WaypointSystem : MonoBehaviour
 	private int waypointindex = 0;
 
 	private EnemyMovement enemy;
-	public GameObject emptyParent;
 
 	void Start()
 	{
@@ -49,8 +48,7 @@ public class WaypointSystem : MonoBehaviour
 	{
 		PlayerStats.Lives--;
 		WaveSystem.EnemiesAlive--;
-		Destroy(emptyParent);
-		// Destroy(gameObject);
+		Destroy(gameObject);
 	}
 
 }
