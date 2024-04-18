@@ -31,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
 	public void TakeDamage(float amount)
 	{
 		health -= amount;
-		
+
 		healthBar.fillAmount = health / startHealth;
 
 
@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
 			Die();
 		}
 	}
-	public IEnumerator DamageOverTime(float dotDuration,float dotDamgPerTick, GameObject bullet)
+	public IEnumerator DamageOverTime(float dotDuration, float dotDamgPerTick, GameObject bullet)
 	{
 		hasDot = true;
 		float dotTimer = 0;
@@ -71,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
 
 		WaveSystem.EnemiesAlive--;
 
-		Destroy(gameObject);
+		Destroy(GetComponent<WaypointSystem>().emptyParent);
 	}
 
 }
